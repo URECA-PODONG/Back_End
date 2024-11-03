@@ -28,5 +28,5 @@ public class PetItemCommentEntity extends BaseTimeEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pet_item_id")
-    private PetItemEntity petItemEntity;
+    private PetItemEntity petItem;
 }

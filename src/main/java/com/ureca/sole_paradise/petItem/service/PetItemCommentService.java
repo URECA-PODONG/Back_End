@@ -64,7 +64,7 @@ public class PetItemCommentService {
 									   final PetItemCommentDTO petItemCommentDTO) {
 		petItemCommentDTO.setCommentId(petItemCommentEntity.getPetItemCommentId());
 		petItemCommentDTO.setComment(petItemCommentEntity.getComment());
-		petItemCommentDTO.setPetItem(petItemCommentEntity.getPetItemEntity() == null ? null : petItemCommentEntity.getPetItemEntity().getPetItemId());
+		petItemCommentDTO.setPetItem(petItemCommentEntity.getPetItem() == null ? null : petItemCommentEntity.getPetItem().getPetItemId());
 		petItemCommentDTO.setUser(petItemCommentEntity.getUser() == null ? null : petItemCommentEntity.getUser().getUserId());
 		return petItemCommentDTO;
 	}
@@ -74,7 +74,7 @@ public class PetItemCommentService {
 		petItemComment.setComment(petItemCommentDTO.getComment());
 		final PetItemEntity petItem = petItemCommentDTO.getPetItem() == null ? null : petItemRepository.findById(petItemCommentDTO.getPetItem())
 				.orElseThrow(() -> new NotFoundException("petItem not found"));
-		petItemComment.setPetItemEntity(petItem);
+		petItemComment.setPetItem(petItem);
 		final UserEntity user = petItemCommentDTO.getUser() == null ? null : userRepository.findById(petItemCommentDTO.getUser())
 				.orElseThrow(() -> new NotFoundException("user not found"));
 		petItemComment.setUser(user);
