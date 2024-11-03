@@ -58,8 +58,6 @@ public class HealthService {
 	        healthDTO.setNotes(health.getNotes());
 	        healthDTO.setHealthDate(health.getHealthDate());
 	        healthDTO.setNextCheckupDate(health.getNextCheckupDate());
-	        healthDTO.setCreatedAt(health.getCreatedAt());
-	        healthDTO.setUpdatedAt(health.getUpdatedAt());
 	        healthDTO.setAlarmStatus(health.getAlarmStatus());
 	        healthDTO.setPet(health.getPet() == null ? null : health.getPet().getPetId());
 	        return healthDTO;
@@ -70,8 +68,6 @@ public class HealthService {
 	        health.setNotes(healthDTO.getNotes());
 	        health.setHealthDate(healthDTO.getHealthDate());
 	        health.setNextCheckupDate(healthDTO.getNextCheckupDate());
-	        health.setCreatedAt(healthDTO.getCreatedAt());
-	        health.setUpdatedAt(healthDTO.getUpdatedAt());
 	        health.setAlarmStatus(healthDTO.getAlarmStatus());
 	        final PetEntity pet = healthDTO.getPet() == null ? null : petRepository.findById(healthDTO.getPet())
 	                .orElseThrow(() -> new NotFoundException("pet not found"));

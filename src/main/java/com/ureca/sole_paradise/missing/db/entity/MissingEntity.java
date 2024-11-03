@@ -40,12 +40,6 @@ public class MissingEntity extends BaseTimeEntity {
     @Column(nullable = false)
     private OffsetDateTime missingDate;
 
-    @Column(nullable = false)
-    private OffsetDateTime createdAt;
-
-    @Column
-    private OffsetDateTime updatedAt;
-
     @Column(nullable = false, length = 2000)
     private String missingDetails;
 

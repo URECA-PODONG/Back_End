@@ -70,8 +70,6 @@ public class PetService {
         petDTO.setPetWeight(pet.getPetWeight());
         petDTO.setNeutering(pet.getNeutering());
         petDTO.setPetAllergy(pet.getPetAllergy());
-        petDTO.setCreatedAt(pet.getCreatedAt());
-        petDTO.setUpdatedAt(pet.getUpdatedAt());
         petDTO.setGender(pet.getGender());
         petDTO.setUser(pet.getUser() == null ? null : pet.getUser().getUserId());
         return petDTO;
@@ -86,8 +84,6 @@ public class PetService {
         pet.setPetWeight(petDTO.getPetWeight());
         pet.setNeutering(petDTO.getNeutering());
         pet.setPetAllergy(petDTO.getPetAllergy());
-        pet.setCreatedAt(petDTO.getCreatedAt());
-        pet.setUpdatedAt(petDTO.getUpdatedAt());
         pet.setGender(petDTO.getGender());
         final UserEntity user = petDTO.getUser() == null ? null : userRepository.findById(petDTO.getUser())
             .orElseThrow(() -> new NotFoundException("user not found"));

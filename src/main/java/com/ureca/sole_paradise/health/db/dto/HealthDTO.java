@@ -1,5 +1,6 @@
 package com.ureca.sole_paradise.health.db.dto;
 
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 
 import jakarta.validation.constraints.NotNull;
@@ -12,19 +13,14 @@ public class HealthDTO {
 
     private Integer healthId;
 
-    private OffsetDateTime visitedDate;
+    private LocalDateTime visitedDate;
 
     @NotNull
     private String notes;
 
-    private OffsetDateTime healthDate;
+    private LocalDateTime healthDate;
 
-    private OffsetDateTime nextCheckupDate;
-
-    @NotNull
-    private OffsetDateTime createdAt;
-
-    private OffsetDateTime updatedAt;
+    private LocalDateTime nextCheckupDate;
 
     private Boolean alarmStatus;
 
