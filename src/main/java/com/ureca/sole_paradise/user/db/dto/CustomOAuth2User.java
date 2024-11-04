@@ -53,6 +53,10 @@ public class CustomOAuth2User implements OAuth2User {
         return oAuth2Response.getProvider() + " " + oAuth2Response.getProviderId();
     }
 
+    public String getNickname() {
+        return oAuth2Response.getNickname();
+    }
+
     public String getProfileImage() {
         return oAuth2Response.getProfileImage(); }
 

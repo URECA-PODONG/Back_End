@@ -48,7 +48,7 @@ public class KakaoResponse implements OAuth2Response {
     @Override
     public String getNickname() {
         // TODO Auto-generated method stub
-        return null;
+        return profile.get("nickname").toString();
     }
 
 }
