@@ -31,7 +31,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.constraints.NotNull;
 
 @RestController
-@RequestMapping(value = "/api/pets", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/pets", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PetController {
 
     private final PetService petService;
