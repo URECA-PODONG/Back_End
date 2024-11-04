@@ -1,6 +1,7 @@
 package com.ureca.sole_paradise.payments.controller;
 
 import com.siot.IamportRestClient.exception.IamportResponseException;
+import com.ureca.sole_paradise.payments.db.dto.CartListReq;
 import com.ureca.sole_paradise.payments.db.dto.PaymentsListDTO;
 import com.ureca.sole_paradise.payments.db.entity.PaymentsEntity;
 import com.ureca.sole_paradise.payments.service.PaymentsService;
@@ -20,10 +21,13 @@ public class PaymentController {
     private final PaymentsService paymentsService;
 
     @PostMapping("/list/{iamUid}/{userId}")
-    public ResponseEntity<?> paymentResult(@PathVariable(name = "iamUid") String iamUid, @PathVariable(name = "userId") int userId) throws IamportResponseException, IOException {
-        paymentsService.createPayLog(iamUid, userId);
+    public ResponseEntity<?> paymentResult( @RequestBody CartListReq cartListReq,
+                                            @PathVariable(name = "iamUid") String iamUid,
+                                            @PathVariable(name = "userId") int userId) throws IamportResponseException, IOException {
+        paymentsService.createPayLog(iamUid, userId, cartListReq);
         return null;
     }
+
 
     @GetMapping("/list/{userId}")
     public ResponseEntity<List<PaymentsListDTO>> getPaymentLogList(@PathVariable(name = "userId") int userId) {
