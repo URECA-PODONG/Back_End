@@ -17,11 +17,6 @@ public class CommunityCommentDTO {
     @Size(max = 255)
     private String comment;
 
-    private OffsetDateTime updatedAt;
-
-    @NotNull
-    private OffsetDateTime createdAt;
-
     @NotNull
     private Integer post;
 

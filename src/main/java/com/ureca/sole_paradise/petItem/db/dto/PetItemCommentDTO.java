@@ -16,10 +16,6 @@ public class PetItemCommentDTO {
 	    @NotNull
 	    private String comment; //내용
 
-	    @NotNull
-	    private OffsetDateTime createdAt;//등록시간
-
-	    private OffsetDateTime updatedAt;
 
 	    @NotNull
 	    private Integer petItem;//등록 글 번호

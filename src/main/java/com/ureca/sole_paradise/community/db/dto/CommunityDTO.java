@@ -24,11 +24,6 @@ public class CommunityDTO {
 
     private Integer good;
 
-    @NotNull
-    private OffsetDateTime createdAt;
-
-    private OffsetDateTime updatedAt;
-
     @Size(max = 225)
     private String category;
 

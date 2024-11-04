@@ -30,12 +30,7 @@ public class PetItemDTO {
 
     private Integer sharing;
 
-    @NotNull
-    private OffsetDateTime createdAt;
-
-    private OffsetDateTime updatedAt;
-
-    @Size(max = 255)
+     @Size(max = 255)
     private String nanum;// 나눔 여부??
 
     @NotNull
