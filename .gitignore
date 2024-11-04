@@ -37,6 +37,6 @@ out/
 .vscode/
 
 /logs/
-*.logs
+*.log
 
 src/main/resources/application-main.yaml

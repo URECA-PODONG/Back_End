@@ -8,10 +8,13 @@ import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import com.ureca.sole_paradise.user.config.ReferencedException;
 import com.ureca.sole_paradise.user.config.ReferencedWarning;
+import com.ureca.sole_paradise.user.db.dto.CustomOAuth2User;
+import com.ureca.sole_paradise.user.db.dto.KakaoResponse;
 import com.ureca.sole_paradise.user.db.dto.UserDTO;
 import com.ureca.sole_paradise.user.service.UserService;
 
@@ -49,9 +52,19 @@ public class UserController {
         return new ResponseEntity<>(createdUserId, HttpStatus.CREATED);
     }
 
+    @GetMapping("/getsocialinfo") // 유저를 불러오는 방법
+    public ResponseEntity<?> getsocialinfo(@AuthenticationPrincipal CustomOAuth2User user) {
+        KakaoResponse kakaoResponse = new KakaoResponse(user.getAttributes());
+        System.out.println("확인용 : " + kakaoResponse.getEmail());
+        System.out.println("확인용2 : " + kakaoResponse.getProviderId());
+
+        return new ResponseEntity<>(userService.getSocialInfo(kakaoResponse), HttpStatus.OK);
+
+    }
+
     @PutMapping("/{userId}")
     public ResponseEntity<Integer> updateUser(@PathVariable(name = "userId") final Integer userId,
-                                               @RequestBody @Valid final UserDTO userDTO) {
+                                              @RequestBody @Valid final UserDTO userDTO) {
         try {
             userService.update(userId, userDTO);
             return ResponseEntity.ok(userId);
@@ -71,8 +84,8 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
     //@PostMapping("/Register")
-   // public ResponseEntity<> Register(@RequestBody UserDTO userDTO) {
-    	
+    // public ResponseEntity<> Register(@RequestBody UserDTO userDTO) {
+
     //}
-    
+
 }

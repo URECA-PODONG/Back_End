@@ -23,8 +23,7 @@ import jakarta.validation.Valid;
 
 
 @RestController
-@CrossOrigin("*")
-@RequestMapping(value = "/api/petItemComments", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/petItemComments", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PetItemCommentController {
 
 

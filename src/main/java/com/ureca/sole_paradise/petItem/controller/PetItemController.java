@@ -24,8 +24,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@CrossOrigin("*")
-@RequestMapping(value = "/api/petItems", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/petItems", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PetItemController {
 
 
