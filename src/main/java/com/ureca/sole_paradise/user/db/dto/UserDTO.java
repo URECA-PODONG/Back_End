@@ -37,4 +37,9 @@ public class UserDTO {
     @Size(max = 20) // 전화번호 최대 길이 제한
     private String phoneNumber; // 전화번호 필드 추가
 
+    private boolean health;
+
+    private boolean petCare;
+
+    private boolean missing;
 }
