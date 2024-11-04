@@ -1,5 +1,6 @@
 package com.ureca.sole_paradise.user.controller;
 
+import com.ureca.sole_paradise.user.db.dto.UserIdResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import java.util.List;
@@ -47,9 +48,9 @@ public class UserController {
 
     @PostMapping("/Register")
     @ApiResponse(responseCode = "201")
-    public ResponseEntity<Integer> createUser(@RequestBody @Valid final UserDTO userDTO) {
-        final Integer createdUserId = userService.create(userDTO);
-        return new ResponseEntity<>(createdUserId, HttpStatus.CREATED);
+    public ResponseEntity<UserIdResponse> createUser(@RequestBody @Valid final UserDTO userDTO) {
+        UserIdResponse user = userService.create(userDTO);
+        return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
     @GetMapping("/getsocialinfo") // 유저를 불러오는 방법
