@@ -35,9 +35,13 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         String role = auth.getAuthority();
 
         // 04.14 - 비회원 상태일경우 가입 페이지로, 커스텀 필요
+
+
         if (role.equals("ROLE_VALIDATE")) {
             response.setStatus(205);
             //회원가입 페이지
+            response.addCookie(createCookie("profile_nickname",customUserDetails.getNickname()));
+            response.addCookie(createCookie("email",customUserDetails.getEmail()));
             response.sendRedirect("http://localhost:5173/userRegister/" + URLEncoder.encode(customUserDetails.getEmail(), "UTF-8"));
 
             //    response.sendRedirect("http://localhost:5173/userRegister/:userId");
@@ -45,5 +49,15 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         }
 
         response.sendRedirect("http://localhost:5173/MainPage/" + customUserDetails.getUserId());
+    }
+
+    private Cookie createCookie(String key, String value) {
+
+        Cookie cookie = new Cookie(key, value);
+        cookie.setMaxAge(246060);
+        cookie.setSecure(true);
+        cookie.setPath("/");
+
+        return cookie;
     }
 }
