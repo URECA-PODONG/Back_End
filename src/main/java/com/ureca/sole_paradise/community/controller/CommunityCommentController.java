@@ -21,9 +21,9 @@ import com.ureca.sole_paradise.community.service.CommunityCommentService;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 
-@CrossOrigin("*")
+
 @RestController
-@RequestMapping(value = "/api/communityComments", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/communityComments", produces = MediaType.APPLICATION_JSON_VALUE)
 public class CommunityCommentController {
 
     private final CommunityCommentService communityCommentService;
