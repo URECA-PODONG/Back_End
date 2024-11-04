@@ -25,7 +25,7 @@ public class CartService {
     }
 
     public List<CartDTO> getCartItemsByUserId(Integer userId) {
-        List<CartEntity> cartEntities = cartRepository.findByUserUserId(userId);
+        List<CartEntity> cartEntities = cartRepository.findByUser_UserId(userId);
         if (cartEntities == null || cartEntities.isEmpty()) {
             return new ArrayList<>(); // 빈 리스트 반환
         }
@@ -33,10 +33,11 @@ public class CartService {
     }
 
 
+
     public void addToCart(CartDTO cartDTO) {
         CartEntity cartEntity = new CartEntity();
-        cartEntity.setUserEntity(userRepository.findById(cartDTO.getUserId()).orElseThrow());
-        cartEntity.setProductEntity(productRepository.findById(cartDTO.getProductId()).orElseThrow());
+        cartEntity.setUser(userRepository.findById(cartDTO.getUserId()).orElseThrow()); // 여기서 setUser를 사용합니다.
+        cartEntity.setProduct(productRepository.findById(cartDTO.getProductId()).orElseThrow());
         cartEntity.setQuantity(cartDTO.getQuantity());
         cartRepository.save(cartEntity);
     }
@@ -54,9 +55,12 @@ public class CartService {
     private CartDTO convertToDTO(CartEntity cartEntity) {
         CartDTO dto = new CartDTO();
         dto.setCartId(cartEntity.getCartId());
-        dto.setUserId(cartEntity.getUserEntity().getUserId());
-        dto.setProductId(cartEntity.getProductEntity().getProductId());
+        dto.setUserId(cartEntity.getUser().getUserId());
+        dto.setProductId(cartEntity.getProduct().getProductId());
         dto.setQuantity(cartEntity.getQuantity());
+        dto.setProductImage(cartEntity.getProduct().getProductImage());
+        dto.setProductTitle(cartEntity.getProduct().getProductTitle());
+        dto.setProductLprice(cartEntity.getProduct().getProductLprice());
         return dto;
     }
 }
