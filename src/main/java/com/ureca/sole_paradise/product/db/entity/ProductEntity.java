@@ -26,13 +26,13 @@ public class ProductEntity extends BaseTimeEntity {
     private String productImage;
 
     @Column(nullable = false)
-    private int productLprice;
+    private Integer productLprice;
 
-    private int productHprice;
+    private Integer productHprice;
 
     private String productMallName;
 
-    private int productType;
+    private Integer productType;
 
     private String productBrand;
 

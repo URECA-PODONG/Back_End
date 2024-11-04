@@ -15,10 +15,12 @@ public class SoleParadiseApplication {
 		SpringApplication.run(SoleParadiseApplication.class, args);
 	}
 
+	/*
 	@Bean
 	public CommandLineRunner run(NaverApiToDatabase naverApiToDatabase) {
 		return args -> {
 			naverApiToDatabase.fetchDataAndSave();
 		};
 	}
+	 */
 }
