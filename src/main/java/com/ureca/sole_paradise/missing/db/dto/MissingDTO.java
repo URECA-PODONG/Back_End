@@ -41,7 +41,7 @@ public class MissingDTO {
     private String alarmPicture;
 
     @NotNull
-    private Boolean contactNumber;
+    private String contactNumber;
 
     @NotNull
     private Integer pet;
