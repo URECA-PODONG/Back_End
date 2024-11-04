@@ -11,7 +11,7 @@ import lombok.Setter;
 public class PetItemCommentDTO {
 
 	
-	 private Integer commentId;//글 id
+	 private Integer petItemCommentId;//글 id
 
 	    @NotNull
 	    private String comment; //내용

@@ -22,8 +22,7 @@ import jakarta.validation.Valid;
 
 
 @RestController
-@RequestMapping(value = "/api/healths", produces = MediaType.APPLICATION_JSON_VALUE)
-
+@RequestMapping(value = "/healths", produces = MediaType.APPLICATION_JSON_VALUE)
 public class HealthController {
 
 	private final HealthService healthService;

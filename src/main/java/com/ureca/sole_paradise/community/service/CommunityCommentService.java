@@ -62,7 +62,7 @@ public class CommunityCommentService {
 
     private CommunityCommentDTO mapToDTO(final CommunityCommentEntity communityCommentEntity,
                                          final CommunityCommentDTO communityCommentDTO) {
-        communityCommentDTO.setCommentId(communityCommentEntity.getCommunityCommentId());
+        communityCommentDTO.setCommunityCommentId(communityCommentEntity.getCommunityCommentId());
         communityCommentDTO.setComment(communityCommentEntity.getComment());
         communityCommentDTO.setPost(communityCommentEntity.getPost() == null ? null : communityCommentEntity.getPost().getPostId());
         communityCommentDTO.setUser(communityCommentEntity.getUser() == null ? null : communityCommentEntity.getUser().getUserId());

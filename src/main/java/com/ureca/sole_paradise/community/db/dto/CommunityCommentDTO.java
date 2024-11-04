@@ -12,7 +12,7 @@ import lombok.Setter;
 public class CommunityCommentDTO {
 
 	
-	private Integer commentId;
+	private Integer communityCommentId;
 
     @Size(max = 255)
     private String comment;

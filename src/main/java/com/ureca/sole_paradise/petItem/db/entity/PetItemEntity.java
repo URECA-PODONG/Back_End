@@ -54,7 +54,7 @@ public class PetItemEntity extends BaseTimeEntity {
     @JoinColumn(name = "user_id", nullable = false)
     private UserEntity user;
 
-//    @OneToMany(mappedBy = "petItem")
-//    private Set<PetItemComment> petItemPetItemComments;
+    @OneToMany(mappedBy = "petItem")
+    private Set<PetItemCommentEntity> petItemPetItemComments;
 
 }

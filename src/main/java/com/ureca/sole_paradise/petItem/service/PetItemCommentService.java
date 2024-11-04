@@ -31,14 +31,14 @@ public class PetItemCommentService {
 	}
 
 	public List<PetItemCommentDTO> findAll() {
-		final List<PetItemCommentEntity> petItemCommentEntites = petItemCommentRepository.findAll(Sort.by("commentId"));
+		final List<PetItemCommentEntity> petItemCommentEntites = petItemCommentRepository.findAll(Sort.by("petItemCommentId"));
 		return petItemCommentEntites.stream()
 				.map(petItemCommentEntity -> mapToDTO(petItemCommentEntity, new PetItemCommentDTO()))
 				.toList();
 	}
 
-	public PetItemCommentDTO get(final Integer commentId) {
-		return petItemCommentRepository.findById(commentId)
+	public PetItemCommentDTO get(final Integer petItemCommentId) {
+		return petItemCommentRepository.findById(petItemCommentId)
 				.map(petItemCommentEntity -> mapToDTO(petItemCommentEntity, new PetItemCommentDTO()))
 				.orElseThrow(NotFoundException::new);
 	}
@@ -49,20 +49,20 @@ public class PetItemCommentService {
 		return petItemCommentRepository.save(petItemCommentEntity).getPetItemCommentId();
 	}
 
-	public void update(final Integer commentId, final PetItemCommentDTO petItemCommentDTO) {
-		final PetItemCommentEntity petItemCommentEntity = petItemCommentRepository.findById(commentId)
+	public void update(final Integer petItemCommentId, final PetItemCommentDTO petItemCommentDTO) {
+		final PetItemCommentEntity petItemCommentEntity = petItemCommentRepository.findById(petItemCommentId)
 				.orElseThrow(NotFoundException::new);
 		mapToEntity(petItemCommentDTO, petItemCommentEntity);
 		petItemCommentRepository.save(petItemCommentEntity);
 	}
 
-	public void delete(final Integer commentId) {
-		petItemCommentRepository.deleteById(commentId);
+	public void delete(final Integer petItemCommentId) {
+		petItemCommentRepository.deleteById(petItemCommentId);
 	}
 
 	private PetItemCommentDTO mapToDTO(final PetItemCommentEntity petItemCommentEntity,
 									   final PetItemCommentDTO petItemCommentDTO) {
-		petItemCommentDTO.setCommentId(petItemCommentEntity.getPetItemCommentId());
+		petItemCommentDTO.setPetItemCommentId(petItemCommentEntity.getPetItemCommentId());
 		petItemCommentDTO.setComment(petItemCommentEntity.getComment());
 		petItemCommentDTO.setPetItem(petItemCommentEntity.getPetItem() == null ? null : petItemCommentEntity.getPetItem().getPetItemId());
 		petItemCommentDTO.setUser(petItemCommentEntity.getUser() == null ? null : petItemCommentEntity.getUser().getUserId());
