@@ -40,7 +40,8 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         if (role.equals("ROLE_VALIDATE")) {
             response.setStatus(205);
             //회원가입 페이지
-            response.addCookie(createCookie("nickname",customUserDetails.getNickname()));
+            response.addCookie(createCookie("profile_nickname",customUserDetails.getNickname()));
+            response.addCookie(createCookie("email",customUserDetails.getEmail()));
             response.sendRedirect("http://localhost:5173/userRegister/" + URLEncoder.encode(customUserDetails.getEmail(), "UTF-8"));
 
             //    response.sendRedirect("http://localhost:5173/userRegister/:userId");
