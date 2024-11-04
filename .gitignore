@@ -36,5 +36,6 @@ out/
 ### VS Code ###
 .vscode/
 
+*.log
 
 src/main/resources/application-main.yaml

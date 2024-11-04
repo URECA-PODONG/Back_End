@@ -81,6 +81,9 @@ public class UserService {
         user.setNickname(userDTO.getNickname());
         user.setAddress(userDTO.getAddress());
         user.setPhoneNumber(userDTO.getPhoneNumber());
+        user.setHealth(userDTO.isHealth());
+        user.setPetCare(userDTO.isPetCare());
+        user.setMissing(userDTO.isMissing());
         return user;
     }
 
