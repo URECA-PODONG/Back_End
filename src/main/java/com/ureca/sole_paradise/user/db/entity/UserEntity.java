@@ -26,23 +26,23 @@ public class UserEntity extends BaseTimeEntity {
     private String accountEmail;
 
     @Column(nullable = false)
-    private String profileNickname;
+    private String profileNickname = "기본 닉네임"; // 기본값 설정
 
     @Column(columnDefinition = "longtext", nullable = true)
     private String userPicture;
 
-    @Column(length = 50, nullable = true)  // 별명은 사용자가 나중에 설정할 수 있도록 null 허용
+    @Column(length = 50, nullable = true)
     private String nickname;
 
-    @Column(nullable = true, length = 500)  // VARCHAR(500) 설정
-    private String address;  // Boolean -> String으로 변경
+    @Column(nullable = true, length = 500)
+    private String address;
 
-    @Column(length = 500, nullable = true)  // Refresh Token 필드 추가
-    private String refreshToken;  // Refresh Token 저장
-
-    @Column(length = 20, nullable = true) // 전화번호 추가
+    @Column(length = 20, nullable = true)
     private String phoneNumber;
 
-//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-//    private Set<Cart> userCarts;
+    private boolean health;
+
+    private boolean petCare;
+
+    private boolean missing;
 }

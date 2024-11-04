@@ -31,8 +31,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin("*")
-@RequestMapping(value = "/api/communities", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/communities", produces = MediaType.APPLICATION_JSON_VALUE)
 public class CommunityController {
 
 
