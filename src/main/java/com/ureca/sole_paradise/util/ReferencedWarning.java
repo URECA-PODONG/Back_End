@@ -10,8 +10,6 @@ import lombok.Setter;
 @Setter
 public class ReferencedWarning {
 
-	
-
     private String key = null;
     private ArrayList<Object> params = new ArrayList<>();
 

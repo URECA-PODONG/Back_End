@@ -19,16 +19,13 @@ public class WalkRouteEntity {
     @Column(name = "walk_route_id", nullable = false, updatable = false)
     private Integer walkrouteId;
 
-    @Column(nullable = false)
-    private String walkrouteName;
+    private String Latitude;
 
-    private String  location;
+    private String longitude;
 
-    private int distanceKm;
+    private String distanceKm;
 
-    private int popularity;
-
-    private boolean walkStart;
+    private String walkTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
