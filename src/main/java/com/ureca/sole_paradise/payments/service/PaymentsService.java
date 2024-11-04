@@ -4,6 +4,11 @@ import com.siot.IamportRestClient.IamportClient;
 import com.siot.IamportRestClient.exception.IamportResponseException;
 import com.siot.IamportRestClient.response.IamportResponse;
 import com.siot.IamportRestClient.response.Payment;
+import com.ureca.sole_paradise.cart.db.entity.CartEntity;
+import com.ureca.sole_paradise.cart.db.repository.CartRepository;
+import com.ureca.sole_paradise.order.db.entity.OrderEntity;
+import com.ureca.sole_paradise.order.db.repository.OrderRepository;
+import com.ureca.sole_paradise.payments.db.dto.CartListReq;
 import com.ureca.sole_paradise.payments.db.dto.PaymentsListDTO;
 import com.ureca.sole_paradise.payments.db.entity.PaymentsEntity;
 import com.ureca.sole_paradise.payments.db.repository.PaymentsRepository;
@@ -30,9 +35,11 @@ public class PaymentsService {
     private final IamportClient iamportClient;
 
     private final PaymentsRepository paymentsRepository;
+    private final OrderRepository orderRepository;
+    private final CartRepository cartRepository;
 
-    public void createPayLog(String impUid, int userId) throws IamportResponseException, IOException {
-
+    public void createPayLog(String impUid, int userId, CartListReq cartListReq) throws IamportResponseException, IOException {
+        System.out.println("cartListReq = " + cartListReq.getCartIdList().size());
         IamportResponse<Payment> iamportResponse = iamportClient.paymentByImpUid(impUid);
 
         Payment payment = iamportResponse.getResponse();
@@ -50,7 +57,23 @@ public class PaymentsService {
                 .payMethod(payment.getPayMethod())
                 .payName(payment.getName()).build();
 
-        paymentsRepository.save(paymentEntity);
+        PaymentsEntity payments = paymentsRepository.save(paymentEntity);
+
+        List<OrderEntity> orderEntityList = new ArrayList<>();
+        for(int i = 0; i < cartListReq.getCartIdList().size(); i++) {
+            Optional<CartEntity> optionalCartEntity = cartRepository.findById(cartListReq.getCartIdList().get(i));
+            if (optionalCartEntity.isPresent()) {
+                OrderEntity order = OrderEntity.builder()
+                        .productEntity(optionalCartEntity.get().getProduct())
+                        .userEntity(UserEntity.builder().userId(userId).build())
+                        .paymentsEntity(payments)
+                        .quantity(optionalCartEntity.get().getQuantity())
+                        .build();
+
+                orderEntityList.add(order);
+            }
+        }
+        orderRepository.saveAll(orderEntityList);
 
     }
 
