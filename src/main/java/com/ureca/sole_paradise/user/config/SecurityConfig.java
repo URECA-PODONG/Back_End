@@ -22,7 +22,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-	//OAuth 로그인
+    //OAuth 로그인
     private final CustomOAuth2UserService customOAuth2UserService;
     private final CustomSuccessHandler customSuccessHandler;
 
@@ -86,7 +86,7 @@ public class SecurityConfig {
                         .requestMatchers("/*", "/**").permitAll()
 //                        .requestMatchers("/api/**", "/api/*").permitAll() //개발 용 로그인 안했을때 postman 사용을 위해
                         .anyRequest().authenticated())
-                        .exceptionHandling((exceptionConfig) ->
+                .exceptionHandling((exceptionConfig) ->
                         exceptionConfig.authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/user/error")));
 
 

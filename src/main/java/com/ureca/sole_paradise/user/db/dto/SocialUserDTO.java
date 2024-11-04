@@ -8,6 +8,6 @@ import lombok.Setter;
 public class SocialUserDTO {
 
 	private String SocialEmail;
-	
-	
+
+
 }
