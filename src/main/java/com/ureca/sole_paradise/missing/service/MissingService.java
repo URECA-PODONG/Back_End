@@ -1,7 +1,8 @@
-/*package com.ureca.sole_paradise.missing.service;
+package com.ureca.sole_paradise.missing.service;
 
 import java.util.List;
 
+import com.ureca.sole_paradise.walkRoute.db.entity.WalkRouteEntity;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import com.ureca.sole_paradise.missing.db.repository.MissingRepository;
 import com.ureca.sole_paradise.pet.db.entity.PetEntity;
 import com.ureca.sole_paradise.pet.db.repository.PetRepository;
 import com.ureca.sole_paradise.util.NotFoundException;
+import com.ureca.sole_paradise.walkRoute.db.repository.WalkRouteRepository;
 
 @Service
 public class MissingService {
@@ -61,11 +63,10 @@ public class MissingService {
         missingDTO.setLocation(missing.getLocation());
         missingDTO.setAlertRadiusKm(missing.getAlertRadiusKm());
         missingDTO.setMissingDate(missing.getMissingDate());
-        missingDTO.setCreatedAt(missing.getCreatedAt());
-        missingDTO.setUpdatedAt(missing.getUpdatedAt());
         missingDTO.setMissingDetails(missing.getMissingDetails());
         missingDTO.setMissingStatus(missing.getMissingStatus());
         missingDTO.setAlarmPicture(missing.getAlarmPicture());
+        missingDTO.setContactNumber(missing.getContactNumber());
         missingDTO.setContactNumber(missing.getContactNumber());
         missingDTO.setPet(missing.getPet() == null ? null : missing.getPet().getPetId());
         missingDTO.setWalkroute(missing.getWalkroute() == null ? null : missing.getWalkroute().getWalkrouteId());
@@ -77,19 +78,18 @@ public class MissingService {
         missing.setLocation(missingDTO.getLocation());
         missing.setAlertRadiusKm(missingDTO.getAlertRadiusKm());
         missing.setMissingDate(missingDTO.getMissingDate());
-        missing.setCreatedAt(missingDTO.getCreatedAt());
-        missing.setUpdatedAt(missingDTO.getUpdatedAt());
         missing.setMissingDetails(missingDTO.getMissingDetails());
+        missing.setContactNumber(missingDTO.getContactNumber());
         missing.setMissingStatus(missingDTO.getMissingStatus());
         missing.setAlarmPicture(missingDTO.getAlarmPicture());
         missing.setContactNumber(missingDTO.getContactNumber());
         final PetEntity pet = missingDTO.getPet() == null ? null : petRepository.findById(missingDTO.getPet())
                 .orElseThrow(() -> new NotFoundException("pet not found"));
         missing.setPet(pet);
-        final WalkRoute walkroute = missingDTO.getWalkroute() == null ? null : walkRouteRepository.findById(missingDTO.getWalkroute())
+        final WalkRouteEntity walkroute = missingDTO.getWalkroute() == null ? null : walkRouteRepository.findById(missingDTO.getWalkroute())
                 .orElseThrow(() -> new NotFoundException("walkroute not found"));
         missing.setWalkroute(walkroute);
         return missing;
     }
 
-}*/
+}
