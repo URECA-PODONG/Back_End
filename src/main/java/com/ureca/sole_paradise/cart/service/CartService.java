@@ -4,6 +4,7 @@ import com.ureca.sole_paradise.cart.db.dto.CartDTO;
 import com.ureca.sole_paradise.cart.db.entity.CartEntity;
 import com.ureca.sole_paradise.cart.db.repository.CartRepository;
 import com.ureca.sole_paradise.product.db.repository.ProductRepository;
+import com.ureca.sole_paradise.user.db.entity.UserEntity;
 import com.ureca.sole_paradise.user.db.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +26,8 @@ public class CartService {
     }
 
     public List<CartDTO> getCartItemsByUserId(Integer userId) {
-        List<CartEntity> cartEntities = cartRepository.findByUserUserId(userId);
+        UserEntity userEntity = userRepository.findById(userId).orElseThrow();
+        List<CartEntity> cartEntities = cartRepository.findByUserEntity(userEntity);
         if (cartEntities == null || cartEntities.isEmpty()) {
             return new ArrayList<>(); // 빈 리스트 반환
         }

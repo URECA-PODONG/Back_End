@@ -72,7 +72,7 @@ public class ProductService {
         product.setProductLink(productDTO.getProductLink());
         product.setProductImage(productDTO.getProductImage());
         product.setProductLprice(productDTO.getProductLprice());
-        product.setProductHprice(productDTO.getProductHprice());
+        product.setProductHprice(productDTO.getProductHprice() != null ? productDTO.getProductHprice() : 0);
         product.setProductMallName(productDTO.getProductMallName());
         product.setProductType(productDTO.getProductType());
         product.setProductBrand(productDTO.getProductBrand());
