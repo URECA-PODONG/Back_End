@@ -1,6 +1,7 @@
 package com.ureca.sole_paradise.walkRoute.db.entity;
 
 import com.ureca.sole_paradise.user.db.entity.UserEntity;
+import com.ureca.sole_paradise.util.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class WalkRouteEntity {
+public class WalkRouteEntity extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
