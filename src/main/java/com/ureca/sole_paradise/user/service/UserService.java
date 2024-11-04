@@ -1,6 +1,8 @@
 package com.ureca.sole_paradise.user.service;
 
 import java.util.List;
+
+import com.ureca.sole_paradise.user.db.dto.UserIdResponse;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
@@ -34,11 +36,11 @@ public class UserService {
                 .orElseThrow(NotFoundException::new);
     }
 
-    public Integer create(final UserDTO userDTO) {
+    public UserIdResponse create(final UserDTO userDTO) {
         final UserEntity user = new UserEntity();
         mapToEntity(userDTO, user);
         log.info("Creating user with email: {}", user.getAccountEmail());
-        return userRepository.save(user).getUserId();
+        return new UserIdResponse(userRepository.save(user).getUserId());
     }
 
     //반환타입                       // 재료
