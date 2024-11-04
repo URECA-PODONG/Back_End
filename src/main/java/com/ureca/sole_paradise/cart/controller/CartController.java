@@ -19,7 +19,7 @@ public class CartController {
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<?> getUserCart(@PathVariable Integer userId) {
+    public ResponseEntity<?> getUserCart(@PathVariable("userId") Integer userId) {
         try {
             List<CartDTO> cartItems = cartService.getCartItemsByUserId(userId);
             return ResponseEntity.ok(cartItems);
@@ -37,13 +37,13 @@ public class CartController {
     }
 
     @PutMapping("/{cartId}")
-    public ResponseEntity<String> updateCartQuantity(@PathVariable Integer cartId, @RequestParam Integer quantity) {
+    public ResponseEntity<String> updateCartQuantity(@PathVariable("cartId") Integer cartId, @RequestParam("quantity") Integer quantity) {
         cartService.updateCartQuantity(cartId, quantity);
         return ResponseEntity.ok("수량변경되었습니다");
     }
 
     @DeleteMapping("/{cartId}")
-    public ResponseEntity<String> deleteCartItem(@PathVariable Integer cartId) {
+    public ResponseEntity<String> deleteCartItem(@PathVariable("cartId") Integer cartId) {
         cartService.deleteCartItem(cartId);
         return ResponseEntity.ok("삭제되었습니다.");
     }
