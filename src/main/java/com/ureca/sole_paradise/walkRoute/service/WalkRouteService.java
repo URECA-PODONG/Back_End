@@ -7,6 +7,7 @@ import com.ureca.sole_paradise.user.db.entity.UserEntity;
 import com.ureca.sole_paradise.user.db.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,6 +19,7 @@ public class WalkRouteService {
     private final WalkRouteRepository walkRouteRepository;
     private final UserRepository userRepository;
 
+    @Transactional
     public WalkRouteDTO registerWalkRoute(WalkRouteDTO walkRouteDTO) {
         UserEntity userEntity = userRepository.findById(walkRouteDTO.getUserId())
                 .orElseThrow(() -> new IllegalArgumentException("Invalid user ID"));
@@ -39,6 +41,8 @@ public class WalkRouteService {
                 .distanceKm(walkRouteEntity.getDistanceKm())
                 .walkTime(walkRouteEntity.getWalkTime())
                 .userId(userEntity.getUserId())
+                .createdAt(walkRouteEntity.getCreatedAt())
+                .updatedAt(walkRouteEntity.getUpdatedAt())
                 .build();
     }
 
@@ -58,6 +62,8 @@ public class WalkRouteService {
                 .distanceKm(entity.getDistanceKm())
                 .walkTime(entity.getWalkTime())
                 .userId(entity.getUserEntity().getUserId())
+                .createdAt(entity.getCreatedAt())
+                .updatedAt(entity.getUpdatedAt())
                 .build();
     }
 }
