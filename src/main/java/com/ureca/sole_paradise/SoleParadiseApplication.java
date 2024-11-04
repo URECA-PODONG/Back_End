@@ -17,6 +17,7 @@ public class SoleParadiseApplication {
 
 	/*
 
+
 	@Bean
 	public CommandLineRunner run(NaverApiToDatabase naverApiToDatabase) {
 		return args -> {
