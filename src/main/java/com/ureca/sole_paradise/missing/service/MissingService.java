@@ -61,8 +61,6 @@ public class MissingService {
         missingDTO.setLocation(missing.getLocation());
         missingDTO.setAlertRadiusKm(missing.getAlertRadiusKm());
         missingDTO.setMissingDate(missing.getMissingDate());
-        missingDTO.setCreatedAt(missing.getCreatedAt());
-        missingDTO.setUpdatedAt(missing.getUpdatedAt());
         missingDTO.setMissingDetails(missing.getMissingDetails());
         missingDTO.setMissingStatus(missing.getMissingStatus());
         missingDTO.setAlarmPicture(missing.getAlarmPicture());
@@ -77,8 +75,6 @@ public class MissingService {
         missing.setLocation(missingDTO.getLocation());
         missing.setAlertRadiusKm(missingDTO.getAlertRadiusKm());
         missing.setMissingDate(missingDTO.getMissingDate());
-        missing.setCreatedAt(missingDTO.getCreatedAt());
-        missing.setUpdatedAt(missingDTO.getUpdatedAt());
         missing.setMissingDetails(missingDTO.getMissingDetails());
         missing.setMissingStatus(missingDTO.getMissingStatus());
         missing.setAlarmPicture(missingDTO.getAlarmPicture());
@@ -88,7 +84,7 @@ public class MissingService {
         missing.setPet(pet);
         final WalkRoute walkroute = missingDTO.getWalkroute() == null ? null : walkRouteRepository.findById(missingDTO.getWalkroute())
                 .orElseThrow(() -> new NotFoundException("walkroute not found"));
-        missing.setWalkroute(walkroute);
+        missing.setWalkroute(walkrouteEntity);
         return missing;
     }
 

@@ -12,4 +12,5 @@ public interface MissingRepository extends JpaRepository<MissingEntity, Integer>
 	   MissingEntity findFirstByWalkroute(WalkRoute walkRoute);
 
 
-}*/
+}
+ */

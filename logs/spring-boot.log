@@ -1914,3 +1914,410 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2024-11-04T00:45:53.434+09:00  INFO 24272 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2024-11-04T00:45:53.588+09:00  INFO 24272 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
 2024-11-04T00:45:53.620+09:00  INFO 24272 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 18.933 seconds (process running for 20.498)
+2024-11-04T03:31:56.781+09:00  INFO 43305 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 43305 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T03:31:56.793+09:00  INFO 43305 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T03:31:57.019+09:00  INFO 43305 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-04T03:31:57.020+09:00  INFO 43305 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-04T03:31:58.917+09:00  INFO 43318 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 43318 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T03:31:58.924+09:00  INFO 43318 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T03:31:59.116+09:00  INFO 43318 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-04T03:31:59.117+09:00  INFO 43318 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-04T03:32:00.888+09:00  INFO 43305 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T03:32:01.210+09:00  INFO 43305 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 307 ms. Found 8 JPA repository interfaces.
+2024-11-04T03:32:02.601+09:00  INFO 43318 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T03:32:02.820+09:00  INFO 43318 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 208 ms. Found 8 JPA repository interfaces.
+2024-11-04T03:32:02.885+09:00  INFO 43305 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T03:32:02.904+09:00  INFO 43305 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T03:32:02.904+09:00  INFO 43305 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T03:32:02.985+09:00  INFO 43305 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T03:32:02.985+09:00  INFO 43305 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5964 ms
+2024-11-04T03:32:03.248+09:00  INFO 43305 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T03:32:03.296+09:00  INFO 43305 --- [sole-paradise] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-04T03:32:03.325+09:00  INFO 43305 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T03:32:03.660+09:00  INFO 43305 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T03:32:03.687+09:00  INFO 43305 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-04T03:32:03.990+09:00  INFO 43318 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T03:32:04.008+09:00  INFO 43318 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T03:32:04.008+09:00  INFO 43318 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T03:32:04.084+09:00  INFO 43318 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T03:32:04.085+09:00  INFO 43318 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4966 ms
+2024-11-04T03:32:04.332+09:00  INFO 43318 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T03:32:04.337+09:00  INFO 43305 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d031016
+2024-11-04T03:32:04.342+09:00  INFO 43305 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-04T03:32:04.382+09:00  INFO 43318 --- [sole-paradise] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-04T03:32:04.410+09:00  INFO 43318 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T03:32:04.725+09:00  INFO 43318 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T03:32:04.752+09:00  INFO 43318 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-04T03:32:05.013+09:00  INFO 43318 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5abdc6cc
+2024-11-04T03:32:05.016+09:00  INFO 43318 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-04T03:32:06.582+09:00  INFO 43305 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T03:32:07.282+09:00  INFO 43318 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T03:32:07.697+09:00  INFO 43305 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T03:32:08.353+09:00  INFO 43318 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T03:32:09.635+09:00  INFO 43305 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T03:32:09.707+09:00  WARN 43305 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T03:32:09.965+09:00  WARN 43305 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-11-04T03:32:10.078+09:00  WARN 43305 --- [sole-paradise] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-11-04T03:32:10.083+09:00  INFO 43305 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T03:32:10.086+09:00  INFO 43305 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-04T03:32:10.095+09:00  INFO 43305 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-04T03:32:10.124+09:00  INFO 43305 --- [sole-paradise] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-04T03:32:10.143+09:00 ERROR 43305 --- [sole-paradise] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-11-04T03:32:10.310+09:00  INFO 43318 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T03:32:10.394+09:00  WARN 43318 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T03:32:10.638+09:00  WARN 43318 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-11-04T03:32:10.742+09:00  WARN 43318 --- [sole-paradise] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-11-04T03:32:10.748+09:00  INFO 43318 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T03:32:10.751+09:00  INFO 43318 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-04T03:32:10.758+09:00  INFO 43318 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-04T03:32:10.786+09:00  INFO 43318 --- [sole-paradise] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-04T03:32:10.804+09:00 ERROR 43318 --- [sole-paradise] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-11-04T03:33:16.926+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 43455 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T03:33:16.930+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T03:33:17.019+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-04T03:33:17.019+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-04T03:33:18.929+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T03:33:19.137+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 200 ms. Found 8 JPA repository interfaces.
+2024-11-04T03:33:20.222+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T03:33:20.240+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T03:33:20.240+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T03:33:20.318+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T03:33:20.318+09:00  INFO 43455 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3298 ms
+2024-11-04T03:33:20.567+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T03:33:20.609+09:00  INFO 43455 --- [sole-paradise] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-04T03:33:20.643+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T03:33:20.924+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T03:33:20.949+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-04T03:33:21.357+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d5e93f1
+2024-11-04T03:33:21.360+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-04T03:33:23.216+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T03:33:24.340+09:00  INFO 43455 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T03:33:26.229+09:00  INFO 43455 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T03:33:26.297+09:00  WARN 43455 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T03:33:26.534+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T03:33:26.646+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T03:33:26.671+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 10.649 seconds (process running for 12.321)
+2024-11-04T04:05:31.090+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-04T04:05:31.092+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-04T04:05:31.097+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-11-04T04:12:26.159+09:00  INFO 43455 --- [sole-paradise] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-04T04:12:26.233+09:00  INFO 43455 --- [sole-paradise] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:12:26.240+09:00  INFO 43455 --- [sole-paradise] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-04T04:12:26.248+09:00  INFO 43455 --- [sole-paradise] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-04T04:12:27.348+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 43455 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T04:12:27.352+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T04:12:27.972+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T04:12:28.011+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 8 JPA repository interfaces.
+2024-11-04T04:12:28.327+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T04:12:28.330+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T04:12:28.330+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T04:12:28.355+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T04:12:28.355+09:00  INFO 43455 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 990 ms
+2024-11-04T04:12:28.413+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T04:12:28.418+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T04:12:28.439+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T04:12:28.441+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-11-04T04:12:28.761+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1dfba792
+2024-11-04T04:12:28.762+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-11-04T04:12:29.389+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T04:12:30.478+09:00  INFO 43455 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:12:31.209+09:00  INFO 43455 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T04:12:31.224+09:00  WARN 43455 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T04:12:31.296+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T04:12:31.321+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T04:12:31.331+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 4.352 seconds (process running for 2357.031)
+2024-11-04T04:12:31.334+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-04T04:12:32.731+09:00  INFO 43455 --- [sole-paradise] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-04T04:12:32.753+09:00  INFO 43455 --- [sole-paradise] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:12:32.755+09:00  INFO 43455 --- [sole-paradise] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-11-04T04:12:32.757+09:00  INFO 43455 --- [sole-paradise] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-11-04T04:12:32.989+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 43455 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T04:12:32.991+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T04:12:33.299+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T04:12:33.330+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 8 JPA repository interfaces.
+2024-11-04T04:12:33.548+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T04:12:33.550+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T04:12:33.550+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T04:12:33.569+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T04:12:33.569+09:00  INFO 43455 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 569 ms
+2024-11-04T04:12:33.618+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T04:12:33.623+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T04:12:33.636+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T04:12:33.637+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-11-04T04:12:33.767+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b2f3c63
+2024-11-04T04:12:33.767+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-11-04T04:12:34.226+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T04:12:35.254+09:00  INFO 43455 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:12:35.799+09:00  INFO 43455 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T04:12:35.811+09:00  WARN 43455 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T04:12:35.870+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T04:12:35.889+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T04:12:35.896+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 3.016 seconds (process running for 2361.597)
+2024-11-04T04:12:35.898+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-04T04:16:09.600+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-04T04:16:09.602+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-04T04:16:09.608+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-11-04T04:17:01.876+09:00  WARN 43455 --- [sole-paradise] [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Retrograde clock change detected (housekeeper delta=27s977ms), soft-evicting connections from pool.
+2024-11-04T04:18:45.542+09:00  INFO 43455 --- [sole-paradise] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-04T04:18:45.585+09:00  INFO 43455 --- [sole-paradise] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:18:45.594+09:00  INFO 43455 --- [sole-paradise] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-11-04T04:18:45.599+09:00  INFO 43455 --- [sole-paradise] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-11-04T04:18:46.156+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 43455 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T04:18:46.159+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T04:18:46.822+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T04:18:46.901+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 8 JPA repository interfaces.
+2024-11-04T04:18:47.184+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T04:18:47.189+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T04:18:47.189+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T04:18:47.208+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T04:18:47.209+09:00  INFO 43455 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1034 ms
+2024-11-04T04:18:47.266+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T04:18:47.270+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T04:18:47.285+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T04:18:47.286+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-11-04T04:18:47.623+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13d7ba8
+2024-11-04T04:18:47.624+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-11-04T04:18:48.744+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T04:18:49.795+09:00  INFO 43455 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:18:50.308+09:00  INFO 43455 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T04:18:50.322+09:00  WARN 43455 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T04:18:50.389+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T04:18:50.407+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T04:18:50.415+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 4.482 seconds (process running for 2738.153)
+2024-11-04T04:18:50.419+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-04T04:18:51.829+09:00  INFO 43455 --- [sole-paradise] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-04T04:18:51.848+09:00  INFO 43455 --- [sole-paradise] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:18:51.850+09:00  INFO 43455 --- [sole-paradise] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-11-04T04:18:51.852+09:00  INFO 43455 --- [sole-paradise] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-11-04T04:18:52.100+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 43455 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T04:18:52.102+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T04:18:52.381+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T04:18:52.414+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 8 JPA repository interfaces.
+2024-11-04T04:18:52.602+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T04:18:52.605+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T04:18:52.606+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T04:18:52.622+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T04:18:52.624+09:00  INFO 43455 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 513 ms
+2024-11-04T04:18:52.669+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T04:18:52.674+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T04:18:52.692+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T04:18:52.694+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-11-04T04:18:52.825+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ca95894
+2024-11-04T04:18:52.826+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-11-04T04:18:53.179+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T04:18:54.157+09:00  INFO 43455 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:18:54.822+09:00  INFO 43455 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T04:18:54.838+09:00  WARN 43455 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T04:18:54.910+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T04:18:54.930+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T04:18:54.942+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 2.953 seconds (process running for 2742.68)
+2024-11-04T04:18:54.943+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-04T04:24:21.744+09:00  INFO 43455 --- [sole-paradise] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-04T04:24:21.789+09:00  INFO 43455 --- [sole-paradise] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:24:21.794+09:00  INFO 43455 --- [sole-paradise] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-11-04T04:24:21.802+09:00  INFO 43455 --- [sole-paradise] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-11-04T04:24:23.178+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 43455 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T04:24:23.185+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T04:24:24.323+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T04:24:24.486+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 8 JPA repository interfaces.
+2024-11-04T04:24:24.992+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T04:24:24.996+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T04:24:24.996+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T04:24:25.019+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T04:24:25.019+09:00  INFO 43455 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1817 ms
+2024-11-04T04:24:25.080+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T04:24:25.085+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T04:24:25.102+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T04:24:25.104+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-11-04T04:24:26.068+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31891798
+2024-11-04T04:24:26.120+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-11-04T04:24:26.607+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T04:24:27.644+09:00  INFO 43455 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:24:28.140+09:00  INFO 43455 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T04:24:28.153+09:00  WARN 43455 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T04:24:28.233+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T04:24:28.253+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T04:24:28.261+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 5.976 seconds (process running for 3076.008)
+2024-11-04T04:24:28.263+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-04T04:24:29.673+09:00  INFO 43455 --- [sole-paradise] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-04T04:24:29.687+09:00  INFO 43455 --- [sole-paradise] [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:24:29.689+09:00  INFO 43455 --- [sole-paradise] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-11-04T04:24:29.855+09:00  INFO 43455 --- [sole-paradise] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-11-04T04:24:30.328+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 43455 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T04:24:30.352+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T04:24:30.697+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T04:24:30.724+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 8 JPA repository interfaces.
+2024-11-04T04:24:30.896+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T04:24:30.898+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T04:24:30.898+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T04:24:30.915+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T04:24:30.915+09:00  INFO 43455 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 517 ms
+2024-11-04T04:24:30.966+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T04:24:30.970+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T04:24:30.985+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T04:24:30.986+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-11-04T04:24:31.097+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67e1c342
+2024-11-04T04:24:31.098+09:00  INFO 43455 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-11-04T04:24:31.515+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T04:24:32.442+09:00  INFO 43455 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:24:32.920+09:00  INFO 43455 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T04:24:32.930+09:00  WARN 43455 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T04:24:32.991+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T04:24:33.009+09:00  INFO 43455 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T04:24:33.016+09:00  INFO 43455 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 2.829 seconds (process running for 3080.763)
+2024-11-04T04:24:33.020+09:00  INFO 43455 --- [sole-paradise] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-04T04:24:42.063+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-04T04:24:42.064+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-04T04:24:42.068+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-11-04T04:27:09.869+09:00  INFO 43455 --- [sole-paradise] [http-nio-8080-exec-6] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [g_state={"i_l":0}] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2024-11-04T04:30:02.106+09:00  WARN 43455 --- [sole-paradise] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ureca.sole_paradise.util.NotFoundException]
+2024-11-04T04:30:02.164+09:00  WARN 43455 --- [sole-paradise] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ureca.sole_paradise.util.NotFoundException]
+2024-11-04T04:31:40.609+09:00  WARN 43455 --- [sole-paradise] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ureca.sole_paradise.util.NotFoundException]
+2024-11-04T04:31:43.324+09:00  WARN 43455 --- [sole-paradise] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ureca.sole_paradise.util.NotFoundException]
+2024-11-04T04:31:43.389+09:00  WARN 43455 --- [sole-paradise] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ureca.sole_paradise.util.NotFoundException]
+2024-11-04T04:31:45.485+09:00  WARN 43455 --- [sole-paradise] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ureca.sole_paradise.util.NotFoundException]
+2024-11-04T04:31:48.081+09:00  WARN 43455 --- [sole-paradise] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ureca.sole_paradise.util.NotFoundException]
+2024-11-04T04:31:52.860+09:00  WARN 43455 --- [sole-paradise] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ureca.sole_paradise.util.NotFoundException]
+2024-11-04T04:31:52.933+09:00  WARN 43455 --- [sole-paradise] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ureca.sole_paradise.util.NotFoundException]
+2024-11-04T04:39:13.602+09:00  INFO 43455 --- [sole-paradise] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:39:13.606+09:00  INFO 43455 --- [sole-paradise] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-11-04T04:39:13.610+09:00  INFO 43455 --- [sole-paradise] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-11-04T04:58:43.737+09:00  INFO 51134 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 51134 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T04:58:43.742+09:00  INFO 51134 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T04:58:43.968+09:00  INFO 51134 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-04T04:58:43.969+09:00  INFO 51134 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-04T04:58:46.949+09:00  INFO 51134 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T04:58:47.666+09:00  INFO 51134 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 697 ms. Found 8 JPA repository interfaces.
+2024-11-04T04:58:49.241+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T04:58:49.264+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T04:58:49.264+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T04:58:49.353+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T04:58:49.353+09:00  INFO 51134 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5383 ms
+2024-11-04T04:58:49.594+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T04:58:49.647+09:00  INFO 51134 --- [sole-paradise] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-04T04:58:49.681+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T04:58:50.014+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T04:58:50.042+09:00  INFO 51134 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-04T04:58:50.780+09:00  INFO 51134 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@594259bf
+2024-11-04T04:58:50.784+09:00  INFO 51134 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-04T04:58:52.723+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T04:58:53.957+09:00  INFO 51134 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:58:56.654+09:00  INFO 51134 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T04:58:56.741+09:00  WARN 51134 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T04:58:57.144+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T04:58:57.396+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T04:58:57.433+09:00  INFO 51134 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 14.459 seconds (process running for 15.913)
+2024-11-04T04:59:28.697+09:00  INFO 51134 --- [sole-paradise] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-04T04:59:28.700+09:00  INFO 51134 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-04T04:59:28.709+09:00  INFO 51134 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2024-11-04T04:59:39.602+09:00  INFO 51134 --- [sole-paradise] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (1 addition, 0 deletions, 5 modifications)
+2024-11-04T04:59:39.688+09:00  INFO 51134 --- [sole-paradise] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:59:39.693+09:00  INFO 51134 --- [sole-paradise] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-04T04:59:40.177+09:00  INFO 51134 --- [sole-paradise] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-04T04:59:40.542+09:00  INFO 51134 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 51134 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T04:59:40.546+09:00  INFO 51134 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T04:59:41.196+09:00  INFO 51134 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T04:59:41.250+09:00  INFO 51134 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 8 JPA repository interfaces.
+2024-11-04T04:59:41.550+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T04:59:41.553+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T04:59:41.554+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T04:59:41.581+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T04:59:41.581+09:00  INFO 51134 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1025 ms
+2024-11-04T04:59:41.642+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T04:59:41.647+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T04:59:41.673+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T04:59:41.675+09:00  INFO 51134 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-11-04T04:59:41.806+09:00  INFO 51134 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26149656
+2024-11-04T04:59:41.807+09:00  INFO 51134 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-11-04T04:59:42.556+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T04:59:43.585+09:00  INFO 51134 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T04:59:44.108+09:00  INFO 51134 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T04:59:44.120+09:00  WARN 51134 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T04:59:44.178+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T04:59:44.199+09:00  INFO 51134 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T04:59:44.208+09:00  INFO 51134 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 3.842 seconds (process running for 60.569)
+2024-11-04T04:59:44.211+09:00  INFO 51134 --- [sole-paradise] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-04T06:03:28.926+09:00  INFO 51134 --- [sole-paradise] [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [g_state={"i_l":0}] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2024-11-04T06:03:28.932+09:00  INFO 51134 --- [sole-paradise] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-04T06:03:28.933+09:00  INFO 51134 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-04T06:03:28.942+09:00  INFO 51134 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2024-11-04T06:47:42.838+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=5m28s59ms).
+2024-11-04T06:53:40.682+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=5m27s816ms).
+2024-11-04T06:58:16.479+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=4m35s798ms).
+2024-11-04T07:07:44.442+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=5m27s898ms).
+2024-11-04T07:15:12.927+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=5m28s445ms).
+2024-11-04T07:29:41.332+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=5m28s282ms).
+2024-11-04T07:43:08.060+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=12m56s715ms).
+2024-11-04T08:08:42.424+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=15m34s227ms).
+2024-11-04T08:25:27.373+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=16m44s952ms).
+2024-11-04T08:28:13.916+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m16s524ms).
+2024-11-04T08:42:53.369+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=14m9s444ms).
+2024-11-04T09:00:16.452+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=15m23s55ms).
+2024-11-04T09:03:00.763+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m14s311ms).
+2024-11-04T09:04:31.444+09:00  WARN 51134 --- [sole-paradise] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1m30s682ms).
+2024-11-04T14:38:03.167+09:00  INFO 51134 --- [sole-paradise] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T14:38:03.182+09:00  INFO 51134 --- [sole-paradise] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-11-04T14:38:03.201+09:00  INFO 51134 --- [sole-paradise] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-11-04T14:38:13.118+09:00  INFO 94880 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Starting SoleParadiseApplication using Java 17.0.11 with PID 94880 (/Users/songsubin/Back_End/build/classes/java/main started by songsubin in /Users/songsubin/Back_End)
+2024-11-04T14:38:13.126+09:00  INFO 94880 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : The following 1 profile is active: "main"
+2024-11-04T14:38:13.350+09:00  INFO 94880 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-04T14:38:13.351+09:00  INFO 94880 --- [sole-paradise] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-04T14:38:16.059+09:00  INFO 94880 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-04T14:38:16.307+09:00  INFO 94880 --- [sole-paradise] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 239 ms. Found 8 JPA repository interfaces.
+2024-11-04T14:38:17.526+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-04T14:38:17.547+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-04T14:38:17.549+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-04T14:38:17.663+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-11-04T14:38:17.664+09:00  INFO 94880 --- [sole-paradise] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4312 ms
+2024-11-04T14:38:18.313+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-04T14:38:18.496+09:00  INFO 94880 --- [sole-paradise] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-04T14:38:19.125+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-04T14:38:20.768+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-04T14:38:21.043+09:00  INFO 94880 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-04T14:38:22.612+09:00  INFO 94880 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@716fdb36
+2024-11-04T14:38:22.651+09:00  INFO 94880 --- [sole-paradise] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-04T14:38:27.968+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-04T14:38:29.157+09:00  INFO 94880 --- [sole-paradise] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T14:38:32.006+09:00  INFO 94880 --- [sole-paradise] [restartedMain] g.w.e.AbstractErrorHandlingConfiguration : Error Handling Spring Boot Starter active with 8 handlers
+2024-11-04T14:38:32.142+09:00  WARN 94880 --- [sole-paradise] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-04T14:38:33.234+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-04T14:38:33.484+09:00  INFO 94880 --- [sole-paradise] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2024-11-04T14:38:33.544+09:00  INFO 94880 --- [sole-paradise] [restartedMain] c.u.s.SoleParadiseApplication            : Started SoleParadiseApplication in 21.39 seconds (process running for 26.214)
+2024-11-04T14:49:42.896+09:00  INFO 94880 --- [sole-paradise] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-04T14:49:42.908+09:00  INFO 94880 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-04T14:49:42.932+09:00  INFO 94880 --- [sole-paradise] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2024-11-04T15:02:12.881+09:00  INFO 94880 --- [sole-paradise] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-04T15:02:12.910+09:00  INFO 94880 --- [sole-paradise] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-04T15:02:12.957+09:00  INFO 94880 --- [sole-paradise] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

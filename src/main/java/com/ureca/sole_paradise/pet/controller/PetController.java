@@ -31,7 +31,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.constraints.NotNull;
 
 @RestController
-@RequestMapping(value = "/api/pets", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/pets", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PetController {
 
     private final PetService petService;
@@ -49,14 +49,7 @@ public class PetController {
     public ResponseEntity<PetDTO> getPet(@PathVariable(name = "petId") final Integer petId) {
         return ResponseEntity.ok(petService.get(petId));
     }
-
-	/*@PostMapping
-	@ApiResponse(responseCode = "201")
-	public ResponseEntity<Integer> createPet(@RequestBody @Valid final PetDTO petDTO) {
-	    final Integer createdPetId = petService.create(petDTO);
-	    return new ResponseEntity<>(createdPetId, HttpStatus.CREATED);
-	}*/
-
+	
 	@PutMapping("/{petId}")
 	public ResponseEntity<Integer> updatePet(
 	    @PathVariable(name = "petId") final Integer petId,
@@ -115,12 +108,6 @@ public class PetController {
 	    petService.delete(petId);
 	    return ResponseEntity.noContent().build();
 	}
-	/*@PostMapping
-	@ApiResponse(responseCode = "201")
-	public ResponseEntity<Integer> createPet(@RequestBody @Valid final PetDTO petDTO) {
-	    final Integer createdPetId = petService.create(petDTO);
-	    return new ResponseEntity<>(createdPetId, HttpStatus.CREATED);
-	}*/
 
 	private static final String UPLOAD_DIR = "src/main/resources/static/uploads/";
 
@@ -134,7 +121,7 @@ public class PetController {
 		        @RequestParam("neutering") boolean neutering,
 		        @RequestParam("petAllergy") boolean petAllergy,
 		        @RequestParam("gender") boolean gender,
-		        @RequestParam("user") int user,  // User ID를 받음
+		        @RequestParam("user") int user,
 		        @RequestParam("createdAt") @NotNull OffsetDateTime createdAt,
 		        @RequestParam(value = "image", required = false)
 		        MultipartFile file) {
@@ -154,7 +141,7 @@ public class PetController {
 
 		        if (file != null && !file.isEmpty()) {
 		            String fileName = System.currentTimeMillis() + "";
-		            String[] exts = file.getOriginalFilename().split("\\\\.");
+		            String[] exts = file.getOriginalFilename().split("\\.");
 		            String ext = exts[exts.length - 1]; // 확장자
 		            Path filePath = Paths.get(UPLOAD_DIR + fileName + "." + ext);
 		            Files.createDirectories(filePath.getParent());
