@@ -1,5 +1,6 @@
 package com.ureca.sole_paradise.health.db.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import com.ureca.sole_paradise.pet.db.entity.PetEntity;
@@ -26,16 +27,16 @@ public class HealthEntity extends BaseTimeEntity {
     private Integer healthId;
 
     @Column
-    private LocalDateTime visitedDate;
+    private LocalDate visitedDate;
 
-    @Column(nullable = false, columnDefinition = "longtext")
+    @Column(columnDefinition = "longtext")
     private String notes;
 
     @Column
-    private LocalDateTime healthDate;
+    private LocalDate healthDate;
 
     @Column
-    private LocalDateTime nextCheckupDate;
+    private LocalDate nextCheckupDate;
 
     @Column(columnDefinition = "tinyint", length = 1)
     private Boolean alarmStatus;

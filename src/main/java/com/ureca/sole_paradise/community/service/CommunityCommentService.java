@@ -31,14 +31,14 @@ public class CommunityCommentService {
     }
 
     public List<CommunityCommentDTO> findAll() {
-        final List<CommunityCommentEntity> communityCommentEntites = communityCommentRepository.findAll(Sort.by("commentId"));
+        final List<CommunityCommentEntity> communityCommentEntites = communityCommentRepository.findAll(Sort.by("communityCommentId"));
         return communityCommentEntites.stream()
                 .map(communityCommentEntity -> mapToDTO(communityCommentEntity, new CommunityCommentDTO()))
                 .toList();
     }
 
-    public CommunityCommentDTO get(final Integer commentId) {
-        return communityCommentRepository.findById(commentId)
+    public CommunityCommentDTO get(final Integer communityCommentId) {
+        return communityCommentRepository.findById(communityCommentId)
                 .map(communityCommentEntity -> mapToDTO(communityCommentEntity, new CommunityCommentDTO()))
                 .orElseThrow(NotFoundException::new);
     }
@@ -49,15 +49,15 @@ public class CommunityCommentService {
         return communityCommentRepository.save(communityCommentEntity).getCommunityCommentId();
     }
 
-    public void update(final Integer commentId, final CommunityCommentDTO communityCommentDTO) {
-        final CommunityCommentEntity communityCommentEntity = communityCommentRepository.findById(commentId)
+    public void update(final Integer communityCommentId, final CommunityCommentDTO communityCommentDTO) {
+        final CommunityCommentEntity communityCommentEntity = communityCommentRepository.findById(communityCommentId)
                 .orElseThrow(NotFoundException::new);
         mapToEntity(communityCommentDTO, communityCommentEntity);
         communityCommentRepository.save(communityCommentEntity);
     }
 
-    public void delete(final Integer commentId) {
-        communityCommentRepository.deleteById(commentId);
+    public void delete(final Integer communityCommentId) {
+        communityCommentRepository.deleteById(communityCommentId);
     }
 
     private CommunityCommentDTO mapToDTO(final CommunityCommentEntity communityCommentEntity,
