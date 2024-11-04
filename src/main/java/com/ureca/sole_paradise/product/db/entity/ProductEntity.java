@@ -19,7 +19,7 @@ public class ProductEntity extends BaseTimeEntity {
     private Integer productId;
 
     @Column(nullable = false)
-    private String productName;
+    private String productTitle;
 
     private String productLink;
 
