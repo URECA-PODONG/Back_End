@@ -1,9 +1,7 @@
 package com.ureca.sole_paradise.community.db.dto;
 
 import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
 
-import com.ureca.sole_paradise.util.BaseTimeEntity;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

@@ -1,12 +1,7 @@
 package com.ureca.sole_paradise.community.db.entity;
 
 import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
-import java.util.Base64;
-
 import com.ureca.sole_paradise.user.db.entity.UserEntity;
-
-import com.ureca.sole_paradise.util.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
