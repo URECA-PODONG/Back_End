@@ -88,7 +88,7 @@ public class PetItemController {
             petItemDTO.setCreatedAt(LocalDateTime.now());  // 현재 시간으로 생성일 설정
 
             if (file != null && !file.isEmpty()) {
-                String fileName = System.currentTimeMillis()+"";// + "_" + file.getOriginalFilename();
+                String fileName = System.currentTimeMillis()+"";
                 String[] exts = file.getOriginalFilename().split("\\.");
                 String ext = exts[exts.length-1];//확장자
                 Path filePath = Paths.get(UPLOAD_DIR + fileName+"."+ext);
