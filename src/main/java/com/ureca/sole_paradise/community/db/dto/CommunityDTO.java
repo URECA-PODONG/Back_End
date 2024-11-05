@@ -1,5 +1,6 @@
 package com.ureca.sole_paradise.community.db.dto;
 
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 
 import jakarta.validation.constraints.NotNull;
@@ -21,6 +22,10 @@ public class CommunityDTO {
 
     @NotNull
     private String contents;
+
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
 
     private Integer good;
 

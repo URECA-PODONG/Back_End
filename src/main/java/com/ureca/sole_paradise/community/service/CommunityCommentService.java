@@ -64,6 +64,8 @@ public class CommunityCommentService {
                                          final CommunityCommentDTO communityCommentDTO) {
         communityCommentDTO.setCommunityCommentId(communityCommentEntity.getCommunityCommentId());
         communityCommentDTO.setComment(communityCommentEntity.getComment());
+        communityCommentDTO.setCreatedAt(communityCommentEntity.getCreatedAt());  // createdAt 매핑 추가
+        communityCommentDTO.setUpdatedAt(communityCommentEntity.getUpdatedAt());  // updatedAt 매핑 추가
         communityCommentDTO.setPost(communityCommentEntity.getPost() == null ? null : communityCommentEntity.getPost().getPostId());
         communityCommentDTO.setUser(communityCommentEntity.getUser() == null ? null : communityCommentEntity.getUser().getUserId());
         return communityCommentDTO;

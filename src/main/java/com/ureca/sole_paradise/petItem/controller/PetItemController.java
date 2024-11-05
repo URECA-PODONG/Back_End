@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.List;
 
@@ -84,6 +85,7 @@ public class PetItemController {
             petItemDTO.setPrice(price);
             petItemDTO.setSharing(sharing);
             petItemDTO.setUser(user);  // user ID 설정
+            petItemDTO.setCreatedAt(LocalDateTime.now());  // 현재 시간으로 생성일 설정
 
             if (file != null && !file.isEmpty()) {
                 String fileName = System.currentTimeMillis()+"";// + "_" + file.getOriginalFilename();

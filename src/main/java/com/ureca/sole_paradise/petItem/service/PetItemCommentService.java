@@ -64,6 +64,8 @@ public class PetItemCommentService {
 									   final PetItemCommentDTO petItemCommentDTO) {
 		petItemCommentDTO.setPetItemCommentId(petItemCommentEntity.getPetItemCommentId());
 		petItemCommentDTO.setComment(petItemCommentEntity.getComment());
+		petItemCommentDTO.setCreatedAt(petItemCommentEntity.getCreatedAt());  // createdAt 매핑 추가
+		petItemCommentDTO.setUpdatedAt(petItemCommentEntity.getUpdatedAt());  // updatedAt 매핑 추가
 		petItemCommentDTO.setPetItem(petItemCommentEntity.getPetItem() == null ? null : petItemCommentEntity.getPetItem().getPetItemId());
 		petItemCommentDTO.setUser(petItemCommentEntity.getUser() == null ? null : petItemCommentEntity.getUser().getUserId());
 		return petItemCommentDTO;

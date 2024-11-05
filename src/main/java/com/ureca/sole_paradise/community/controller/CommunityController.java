@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.List;
 
@@ -90,14 +91,15 @@ public class CommunityController {
     public ResponseEntity<?> uploadPet(@RequestParam("title") String title,
                                        @RequestParam("contents") String contents,
                                        @RequestParam("user") Integer user,
-                                       @RequestParam("createdAt") OffsetDateTime createdAt,
+//                                       @RequestParam("createdAt") OffsetDateTime createdAt,
                                        @RequestParam(value = "imageUrl", required = false) MultipartFile file){
         try {
             CommunityDTO communityDTO = new CommunityDTO();
             communityDTO.setTitle(title);
             communityDTO.setContents(contents);
-            communityDTO.setCreatedAt(createdAt);
+//            communityDTO.setCreatedAt(createdAt);
             communityDTO.setUser(user);  // user ID 설정
+            communityDTO.setCreatedAt(LocalDateTime.now());  // 현재 시간으로 생성일 설정
 
             if (file != null && !file.isEmpty()) {
                 String fileName = System.currentTimeMillis()+"";// + "_" + file.getOriginalFilename();

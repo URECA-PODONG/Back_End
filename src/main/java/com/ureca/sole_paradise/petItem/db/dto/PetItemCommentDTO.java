@@ -1,5 +1,6 @@
 package com.ureca.sole_paradise.petItem.db.dto;
 
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 
 import jakarta.validation.constraints.NotNull;
@@ -15,6 +16,10 @@ public class PetItemCommentDTO {
 
 	    @NotNull
 	    private String comment; //내용
+
+		private LocalDateTime createdAt;
+
+		private LocalDateTime updatedAt;
 
 
 	    @NotNull
