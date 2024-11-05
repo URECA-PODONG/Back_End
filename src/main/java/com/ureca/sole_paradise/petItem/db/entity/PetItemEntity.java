@@ -4,6 +4,9 @@ import com.ureca.sole_paradise.user.db.entity.UserEntity;
 import com.ureca.sole_paradise.util.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -15,7 +18,8 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PetItemEntity extends BaseTimeEntity {
+@EntityListeners(AuditingEntityListener.class)
+public class PetItemEntity {
 
     @Id
     @Column(name = "pet_item_id", nullable = false, updatable = false)
@@ -41,6 +45,13 @@ public class PetItemEntity extends BaseTimeEntity {
     @Column
     private Integer price;
 
+    @CreatedDate
+    @Column(updatable = false)  // 생성일은 업데이트되지 않도록 설정
+    private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    private LocalDateTime updatedAt;
+
     @Column
     private Integer good;
 
@@ -54,7 +65,7 @@ public class PetItemEntity extends BaseTimeEntity {
     @JoinColumn(name = "user_id", nullable = false)
     private UserEntity user;
 
-//    @OneToMany(mappedBy = "petItem")
-//    private Set<PetItemComment> petItemPetItemComments;
+    @OneToMany(mappedBy = "petItem")
+    private Set<PetItemCommentEntity> petItemPetItemComments;
 
 }

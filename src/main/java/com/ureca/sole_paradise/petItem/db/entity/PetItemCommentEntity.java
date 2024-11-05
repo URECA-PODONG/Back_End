@@ -5,6 +5,11 @@ import com.ureca.sole_paradise.user.db.entity.UserEntity;
 import com.ureca.sole_paradise.util.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.time.LocalDateTime;
 
 @Entity(name = "pet_item_comment")
 @Getter
@@ -12,7 +17,8 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class PetItemCommentEntity extends BaseTimeEntity {
+@EntityListeners(AuditingEntityListener.class)
+public class PetItemCommentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,11 +28,18 @@ public class PetItemCommentEntity extends BaseTimeEntity {
     @Column(nullable = false)
     private String comment;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private UserEntity user;
+    @CreatedDate
+    @Column(updatable = false)  // 생성일은 업데이트되지 않도록 설정
+    private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    private LocalDateTime updatedAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pet_item_id")
     private PetItemEntity petItem;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
 }

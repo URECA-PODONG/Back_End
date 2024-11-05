@@ -80,6 +80,8 @@ public class PetItemService {
         petItemDTO.setGood(petItemEntity.getGood());
         petItemDTO.setSharing(petItemEntity.getSharing());
         petItemDTO.setNanum(petItemEntity.getNanum());
+        petItemDTO.setCreatedAt(petItemEntity.getCreatedAt());  // createdAt 매핑 추가
+        petItemDTO.setUpdatedAt(petItemEntity.getUpdatedAt());  // updatedAt 매핑 추가
         petItemDTO.setUser(petItemEntity.getUser() == null ? null : petItemEntity.getUser().getUserId());
         return petItemDTO;
     }

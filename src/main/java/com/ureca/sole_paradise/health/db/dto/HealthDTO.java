@@ -1,5 +1,6 @@
 package com.ureca.sole_paradise.health.db.dto;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 
@@ -13,14 +14,14 @@ public class HealthDTO {
 
     private Integer healthId;
 
-    private LocalDateTime visitedDate;
+    private LocalDate visitedDate;
 
-    @NotNull
+
     private String notes;
 
-    private LocalDateTime healthDate;
+    private LocalDate healthDate;
 
-    private LocalDateTime nextCheckupDate;
+    private LocalDate nextCheckupDate;
 
     private Boolean alarmStatus;
 

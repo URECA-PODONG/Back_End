@@ -4,13 +4,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -51,14 +50,7 @@ public class CommunityController {
             @PathVariable(name = "postId") final Integer postId) {
         return ResponseEntity.ok(communityService.get(postId));
     }
-    //등록
-//	    @PostMapping
-//	    @ApiResponse(responseCode = "201")
-//	    public ResponseEntity<Integer> createCommunity(
-//	            @RequestBody @Valid final CommunityDTO communityDTO) {
-//	        final Integer createdPostId = communityService.create(communityDTO);
-//	        return new ResponseEntity<>(createdPostId, HttpStatus.CREATED);
-//	    }
+
     //수정
     @PutMapping("/{postId}")
     public ResponseEntity<Integer> updateCommunity(
@@ -90,14 +82,15 @@ public class CommunityController {
     public ResponseEntity<?> uploadPet(@RequestParam("title") String title,
                                        @RequestParam("contents") String contents,
                                        @RequestParam("user") Integer user,
-                                       @RequestParam("createdAt") OffsetDateTime createdAt,
+//                                       @RequestParam("createdAt") OffsetDateTime createdAt,
                                        @RequestParam(value = "imageUrl", required = false) MultipartFile file){
         try {
             CommunityDTO communityDTO = new CommunityDTO();
             communityDTO.setTitle(title);
             communityDTO.setContents(contents);
-            communityDTO.setCreatedAt(createdAt);
+//            communityDTO.setCreatedAt(createdAt);
             communityDTO.setUser(user);  // user ID 설정
+            communityDTO.setCreatedAt(LocalDateTime.now());  // 현재 시간으로 생성일 설정
 
             if (file != null && !file.isEmpty()) {
                 String fileName = System.currentTimeMillis()+"";// + "_" + file.getOriginalFilename();
