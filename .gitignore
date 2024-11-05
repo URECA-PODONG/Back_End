@@ -40,3 +40,4 @@ out/
 *.log
 
 src/main/resources/application-main.yaml
+src/main/resources/application-dev.yaml
