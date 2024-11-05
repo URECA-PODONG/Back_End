@@ -5,21 +5,17 @@ import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import com.ureca.sole_paradise.pet.db.entity.PetEntity;
 import com.ureca.sole_paradise.util.BaseTimeEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Getter
 @Setter
-public class HealthEntity extends BaseTimeEntity {
+@EntityListeners(AuditingEntityListener.class)
+public class HealthEntity {
 	
 	@Id
     @Column(nullable = false, updatable = false)
@@ -27,15 +23,18 @@ public class HealthEntity extends BaseTimeEntity {
     private Integer healthId;
 
     @Column
+    @LastModifiedDate
     private LocalDate visitedDate;
 
     @Column(columnDefinition = "longtext")
     private String notes;
 
     @Column
+    @LastModifiedDate
     private LocalDate healthDate;
 
     @Column
+    @LastModifiedDate
     private LocalDate nextCheckupDate;
 
     @Column(columnDefinition = "tinyint", length = 1)
