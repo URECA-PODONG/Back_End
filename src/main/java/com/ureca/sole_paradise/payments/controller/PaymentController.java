@@ -21,10 +21,9 @@ public class PaymentController {
     private final PaymentsService paymentsService;
 
     @PostMapping("/list/{iamUid}/{userId}")
-    public ResponseEntity<?> paymentResult( @RequestBody CartListReq cartListReq,
-                                            @PathVariable(name = "iamUid") String iamUid,
+    public ResponseEntity<?> paymentResult( @PathVariable(name = "iamUid") String iamUid,
                                             @PathVariable(name = "userId") int userId) throws IamportResponseException, IOException {
-        paymentsService.createPayLog(iamUid, userId, cartListReq);
+        paymentsService.createPayLog(iamUid, userId);
         return null;
     }
 

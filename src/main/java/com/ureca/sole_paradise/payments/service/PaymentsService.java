@@ -38,8 +38,7 @@ public class PaymentsService {
     private final OrderRepository orderRepository;
     private final CartRepository cartRepository;
 
-    public void createPayLog(String impUid, int userId, CartListReq cartListReq) throws IamportResponseException, IOException {
-        System.out.println("cartListReq = " + cartListReq.getCartIdList().size());
+    public void createPayLog(String impUid, int userId) throws IamportResponseException, IOException {
         IamportResponse<Payment> iamportResponse = iamportClient.paymentByImpUid(impUid);
 
         Payment payment = iamportResponse.getResponse();
@@ -59,19 +58,17 @@ public class PaymentsService {
 
         PaymentsEntity payments = paymentsRepository.save(paymentEntity);
 
-        List<OrderEntity> orderEntityList = new ArrayList<>();
-        for(int i = 0; i < cartListReq.getCartIdList().size(); i++) {
-            Optional<CartEntity> optionalCartEntity = cartRepository.findById(cartListReq.getCartIdList().get(i));
-            if (optionalCartEntity.isPresent()) {
-                OrderEntity order = OrderEntity.builder()
-                        .productEntity(optionalCartEntity.get().getProduct())
-                        .userEntity(UserEntity.builder().userId(userId).build())
-                        .paymentsEntity(payments)
-                        .quantity(optionalCartEntity.get().getQuantity())
-                        .build();
+        List<CartEntity> cartEntityList = cartRepository.findByUser_UserId(userId);
 
-                orderEntityList.add(order);
-            }
+        List<OrderEntity> orderEntityList = new ArrayList<>();
+        for (CartEntity cartEntity : cartEntityList) {
+            OrderEntity order = OrderEntity.builder()
+                    .productEntity(cartEntity.getProduct())
+                    .userEntity(UserEntity.builder().userId(userId).build())
+                    .paymentsEntity(payments)
+                    .quantity(cartEntity.getQuantity())
+                    .build();
+            orderEntityList.add(order);
         }
         orderRepository.saveAll(orderEntityList);
 

@@ -10,6 +10,7 @@ import java.time.LocalDate;
 @Builder
 public class OrderDTO {
 
+    private int orderId;
     private LocalDate date;
     private ProductDTO productDTO;
     private int quantity;

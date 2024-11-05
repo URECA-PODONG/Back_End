@@ -32,6 +32,7 @@ public class OrderService {
         List<OrderDTO> orderDTOList = new ArrayList<>();
         for(OrderEntity order : orderEntityList) {
             OrderDTO orderDTO = OrderDTO.builder()
+                    .orderId(order.getOrderId())
                     .date(order.getCreatedAt().toLocalDate())
                     .productDTO(mapToDTO(order.getProductEntity(), new ProductDTO()))
                     .quantity(order.getQuantity()).build();
