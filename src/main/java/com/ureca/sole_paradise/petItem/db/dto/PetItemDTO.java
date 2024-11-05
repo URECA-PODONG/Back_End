@@ -1,15 +1,17 @@
 package com.ureca.sole_paradise.petItem.db.dto;
 
+import com.ureca.sole_paradise.util.BaseTimeEntity;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Getter
 @Setter
-public class PetItemDTO {
+public class PetItemDTO{
 
     private Integer petItemId;
 
@@ -30,12 +32,11 @@ public class PetItemDTO {
 
     private Integer sharing;
 
-    @NotNull
-    private OffsetDateTime createdAt;
+    private LocalDateTime createdAt;
 
-    private OffsetDateTime updatedAt;
+    private LocalDateTime updatedAt;
 
-    @Size(max = 255)
+     @Size(max = 255)
     private String nanum;// 나눔 여부??
 
     @NotNull

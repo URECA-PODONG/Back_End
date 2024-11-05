@@ -1,24 +1,21 @@
 package com.ureca.sole_paradise.health.db.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import com.ureca.sole_paradise.pet.db.entity.PetEntity;
 import com.ureca.sole_paradise.util.BaseTimeEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-@Entity
+@Entity(name = "health")
 @Getter
 @Setter
-public class HealthEntity extends BaseTimeEntity {
+@EntityListeners(AuditingEntityListener.class)
+public class HealthEntity {
 	
 	@Id
     @Column(nullable = false, updatable = false)
@@ -26,16 +23,19 @@ public class HealthEntity extends BaseTimeEntity {
     private Integer healthId;
 
     @Column
-    private LocalDateTime visitedDate;
+    @LastModifiedDate
+    private LocalDate visitedDate;
 
-    @Column(nullable = false, columnDefinition = "longtext")
+    @Column(columnDefinition = "longtext")
     private String notes;
 
     @Column
-    private LocalDateTime healthDate;
+    @LastModifiedDate
+    private LocalDate healthDate;
 
     @Column
-    private LocalDateTime nextCheckupDate;
+    @LastModifiedDate
+    private LocalDate nextCheckupDate;
 
     @Column(columnDefinition = "tinyint", length = 1)
     private Boolean alarmStatus;

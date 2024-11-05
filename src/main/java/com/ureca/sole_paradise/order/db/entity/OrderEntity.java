@@ -22,14 +22,6 @@ public class OrderEntity extends BaseTimeEntity {
     @Column(name = "order_id", nullable = false, updatable = false)
     private Integer orderId;
 
-    private LocalDateTime orderDate;
-
-    private int totalAmount;
-
-    private String orderMemo;
-
-    private String orderStatus;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
     private ProductEntity productEntity;
@@ -41,4 +33,8 @@ public class OrderEntity extends BaseTimeEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "merchant_id")
     private PaymentsEntity paymentsEntity;
+
+    private int quantity;
+
+
 }

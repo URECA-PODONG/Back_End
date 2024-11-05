@@ -1,7 +1,8 @@
 package com.ureca.sole_paradise.community.db.dto;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
@@ -9,18 +10,18 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CommunityCommentDTO {
+public class CommunityCommentDTO  {
 
 	
-	private Integer commentId;
+	private Integer communityCommentId;
 
     @Size(max = 255)
     private String comment;
 
-    private OffsetDateTime updatedAt;
-
-    @NotNull
-    private OffsetDateTime createdAt;
+    @Column
+    private LocalDateTime createdAt;
+    @Column
+    private LocalDateTime updatedAt;
 
     @NotNull
     private Integer post;

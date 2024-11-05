@@ -1,4 +1,4 @@
-/*package com.ureca.sole_paradise.missing.controller;
+package com.ureca.sole_paradise.missing.controller;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,7 +29,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping(value = "/api/missings", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/missings", produces = MediaType.APPLICATION_JSON_VALUE)
 public class MissingController {
 	private static final String UPLOAD_DIR = "src/main/resources/static/uploads/";
 
@@ -63,6 +62,7 @@ public class MissingController {
 	        @RequestParam("alertradiuskm") int alertradiuskm,
 	        @RequestParam("missingstatus") int missingstatus,
 	        @RequestParam("missingDetails") String missingDetails,
+			@RequestParam("contactNumber") String contactNumber,
 	        @RequestParam(value = "imageUrl", required = false) MultipartFile file) {
 
 	    try {
@@ -75,12 +75,13 @@ public class MissingController {
 	        missingDTO.setMissingDetails(missingDetails);
 	        missingDTO.setCreatedAt(createdAt);
 	        missingDTO.setPet(petId);
+			missingDTO.setContactNumber(contactNumber);
 	        missingDTO.setWalkroute(walkroute);
 
 
 	        if (file != null && !file.isEmpty()) {
 	            String fileName = System.currentTimeMillis() + "";
-	            String[] exts = file.getOriginalFilename().split("\\\\.");
+	            String[] exts = file.getOriginalFilename().split("\\.");
 	            String ext = exts[exts.length - 1]; // 확장자
 	            Path filePath = Paths.get(UPLOAD_DIR + fileName + "." + ext);
 	            Files.createDirectories(filePath.getParent());
@@ -122,4 +123,4 @@ public class MissingController {
 	    return ResponseEntity.noContent().build();
 	}
 
-}*/
+}

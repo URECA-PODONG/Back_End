@@ -69,6 +69,8 @@ public class CommunityService {
         communityDTO.setContents(communityEntity.getContents());
         communityDTO.setImageUrl(communityEntity.getImageUrl());
         communityDTO.setGood(communityEntity.getGood());
+        communityDTO.setCreatedAt(communityEntity.getCreatedAt());  // createdAt 매핑 추가
+        communityDTO.setUpdatedAt(communityEntity.getUpdatedAt());  // updatedAt 매핑 추가
         communityDTO.setCategory(communityEntity.getCategory());
         communityDTO.setUser(communityEntity.getUser() == null ? null : communityEntity.getUser().getUserId());
         return communityDTO;

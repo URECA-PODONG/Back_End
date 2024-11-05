@@ -38,33 +38,33 @@ public class PetItemCommentController {
         return ResponseEntity.ok(petItemCommentService.findAll());
     }
 
-    @GetMapping("/{commentId}")
+    @GetMapping("/{petItemCommentId}")
     public ResponseEntity<PetItemCommentDTO> getPetItemComment(
-            @PathVariable(name = "commentId") final Integer commentId) {
-        return ResponseEntity.ok(petItemCommentService.get(commentId));
+            @PathVariable(name = "petItemCommentId") final Integer petItemCommentId) {
+        return ResponseEntity.ok(petItemCommentService.get(petItemCommentId));
     }
 
     @PostMapping
     @ApiResponse(responseCode = "201")
     public ResponseEntity<Integer> createPetItemComment(
             @RequestBody @Valid final PetItemCommentDTO petItemCommentDTO) {
-        final Integer createdCommentId = petItemCommentService.create(petItemCommentDTO);
-        return new ResponseEntity<>(createdCommentId, HttpStatus.CREATED);
+        final Integer createdPetItemCommentId = petItemCommentService.create(petItemCommentDTO);
+        return new ResponseEntity<>(createdPetItemCommentId, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{commentId}")
+    @PutMapping("/{petItemCommentId}")
     public ResponseEntity<Integer> updatePetItemComment(
-            @PathVariable(name = "commentId") final Integer commentId,
+            @PathVariable(name = "petItemCommentId") final Integer petItemCommentId,
             @RequestBody @Valid final PetItemCommentDTO petItemCommentDTO) {
-        petItemCommentService.update(commentId, petItemCommentDTO);
-        return ResponseEntity.ok(commentId);
+        petItemCommentService.update(petItemCommentId, petItemCommentDTO);
+        return ResponseEntity.ok(petItemCommentId);
     }
 
-    @DeleteMapping("/{commentId}")
+    @DeleteMapping("/{petItemCommentId}")
     @ApiResponse(responseCode = "204")
     public ResponseEntity<Void> deletePetItemComment(
-            @PathVariable(name = "commentId") final Integer commentId) {
-        petItemCommentService.delete(commentId);
+            @PathVariable(name = "petItemCommentId") final Integer petItemCommentId) {
+        petItemCommentService.delete(petItemCommentId);
         return ResponseEntity.noContent().build();
     }
 	

@@ -37,33 +37,33 @@ public class CommunityCommentController {
         return ResponseEntity.ok(communityCommentService.findAll());
     }
 
-    @GetMapping("/{commentId}")
+    @GetMapping("/{communityCommentId}")
     public ResponseEntity<CommunityCommentDTO> getCommunityComment(
-            @PathVariable(name = "commentId") final Integer commentId) {
-        return ResponseEntity.ok(communityCommentService.get(commentId));
+            @PathVariable(name = "communityCommentId") final Integer communityCommentId) {
+        return ResponseEntity.ok(communityCommentService.get(communityCommentId));
     }
 
     @PostMapping
     @ApiResponse(responseCode = "201")
     public ResponseEntity<Integer> createCommunityComment(
             @RequestBody @Valid final CommunityCommentDTO communityCommentDTO) {
-        final Integer createdCommentId = communityCommentService.create(communityCommentDTO);
-        return new ResponseEntity<>(createdCommentId, HttpStatus.CREATED);
+        final Integer createdCommunityCommentId = communityCommentService.create(communityCommentDTO);
+        return new ResponseEntity<>(createdCommunityCommentId, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{commentId}")
+    @PutMapping("/{communityCommentId}")
     public ResponseEntity<Integer> updateCommunityComment(
-            @PathVariable(name = "commentId") final Integer commentId,
+            @PathVariable(name = "communityCommentId") final Integer communityCommentId,
             @RequestBody @Valid final CommunityCommentDTO communityCommentDTO) {
-        communityCommentService.update(commentId, communityCommentDTO);
-        return ResponseEntity.ok(commentId);
+        communityCommentService.update(communityCommentId, communityCommentDTO);
+        return ResponseEntity.ok(communityCommentId);
     }
 
-    @DeleteMapping("/{commentId}")
+    @DeleteMapping("/{communityCommentId}")
     @ApiResponse(responseCode = "204")
     public ResponseEntity<Void> deleteCommunityComment(
-            @PathVariable(name = "commentId") final Integer commentId) {
-        communityCommentService.delete(commentId);
+            @PathVariable(name = "communityCommentId") final Integer communityCommentId) {
+        communityCommentService.delete(communityCommentId);
         return ResponseEntity.noContent().build();
     }
 

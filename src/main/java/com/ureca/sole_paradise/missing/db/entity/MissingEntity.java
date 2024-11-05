@@ -17,7 +17,7 @@ import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+@Entity(name = "missing")
 @Getter
 @Setter
 
@@ -49,8 +49,8 @@ public class MissingEntity extends BaseTimeEntity {
     @Column(nullable = false, columnDefinition = "longtext")
     private String alarmPicture;
 
-    @Column(nullable = false, columnDefinition = "tinyint", length = 1)
-    private Boolean contactNumber;
+    @Column(nullable = false, length = 20)
+    private String contactNumber;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pet_id", nullable = false)
