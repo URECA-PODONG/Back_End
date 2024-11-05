@@ -28,6 +28,12 @@ public class WalkRouteController {
         return new ResponseEntity<>(walkRoutes, HttpStatus.OK);
     }
 
+    @GetMapping("/user/{userId}") // 사용자 ID에 따른 walkroute 조회
+    public ResponseEntity<List<WalkRouteDTO>> getWalkRoutesByUserId(@PathVariable Integer userId) {
+        List<WalkRouteDTO> walkRoutes = walkRouteService.getWalkRoutesByUserId(userId);
+        return new ResponseEntity<>(walkRoutes, HttpStatus.OK);
+    }
+
     @DeleteMapping("/{walkrouteId}")
     public ResponseEntity<Void> deleteWalkRoute(@PathVariable Integer walkrouteId) {
         walkRouteService.deleteWalkRoute(walkrouteId);

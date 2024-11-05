@@ -54,6 +54,13 @@ public class WalkRouteService {
         walkRouteRepository.deleteById(walkrouteId);
     }
 
+    public List<WalkRouteDTO> getWalkRoutesByUserId(Integer userId) {
+        return walkRouteRepository.findByUserEntity_UserId(userId).stream()
+                .map(this::toDTO)
+                .collect(Collectors.toList());
+    }
+
+
     private WalkRouteDTO toDTO(WalkRouteEntity entity) {
         return WalkRouteDTO.builder()
                 .walkrouteId(entity.getWalkrouteId())
