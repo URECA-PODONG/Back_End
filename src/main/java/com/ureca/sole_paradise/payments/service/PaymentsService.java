@@ -44,7 +44,7 @@ public class PaymentsService {
         Payment payment = iamportResponse.getResponse();
 
         PaymentsEntity paymentEntity = PaymentsEntity.builder()
-                .user(UserEntity.builder().userId(1).build())
+                .user(UserEntity.builder().userId(userId).build())
                 .pg(payment.getPgProvider())
                 .payAmount(payment.getAmount().intValue())
                 .payStatus(payment.getStatus())
