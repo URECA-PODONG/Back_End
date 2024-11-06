@@ -6,6 +6,7 @@ import com.ureca.sole_paradise.util.ReferencedException;
 import com.ureca.sole_paradise.util.ReferencedWarning;
 
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
@@ -69,15 +70,17 @@ public class PetItemController {
     }
 
     // 사진 업로드 등록
-
-    private static final String UPLOAD_DIR = "src/main/resources/static/uploads/";
+//    private static final String UPLOAD_DIR = "src/main/resources/static/uploads/";
     @PostMapping
-    public ResponseEntity<?> uploadPet(@RequestParam("name") String name,
+    public ResponseEntity<?> uploadPet(HttpServletRequest request,
+                                       @RequestParam("name") String name,
                                        @RequestParam("description") String description,
                                        @RequestParam("user") Integer user,
                                        @RequestParam("price") Integer price,
                                        @RequestParam("sharing") Integer sharing,
                                        @RequestParam(value = "imageUrl", required = false) MultipartFile file){
+
+        String UPLOAD_DIR = request.getSession().getServletContext().getRealPath("/");
         try {
             PetItemDTO petItemDTO = new PetItemDTO();
             petItemDTO.setName(name);
@@ -92,6 +95,7 @@ public class PetItemController {
                 String[] exts = file.getOriginalFilename().split("\\.");
                 String ext = exts[exts.length-1];//확장자
                 Path filePath = Paths.get(UPLOAD_DIR + fileName+"."+ext);
+                System.out.println("UPLOAD PATH="+filePath);
                 Files.createDirectories(filePath.getParent());
                 Files.copy(file.getInputStream(), filePath);
                 String fp = filePath.toString();

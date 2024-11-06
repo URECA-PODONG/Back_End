@@ -2,5 +2,6 @@ spring:
   profiles:
     active: main
   mvc:
+    static-path-pattern: /webapp/**
     pathmatch:
       matching-strategy: ant_path_matcher
