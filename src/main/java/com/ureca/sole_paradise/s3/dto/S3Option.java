@@ -9,8 +9,11 @@ public enum S3Option {
     profileUpload("프로필 사진 업로드"),
     profileDelete("프로필 사진 삭제"),
     petImgUpload("펫 사진 업로드 "),
-    petImgDelete("펫 사진 삭제 ");
-
+    petImgDelete("펫 사진 삭제 "),
+    petItemImgUpload("펫 용품 사진 업로드"),
+    petItemImgDelete("펫 용품 사진 삭제"),
+    CommunityImgUpload("게시글 이미지 등록"),
+    CommunityImgDelete("게시글 이미지 삭제");
     private final String name;
 
     public static S3Option getNextOption(S3Option currentOption) {

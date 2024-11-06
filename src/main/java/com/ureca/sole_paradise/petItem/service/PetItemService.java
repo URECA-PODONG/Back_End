@@ -5,6 +5,9 @@ import com.ureca.sole_paradise.petItem.db.entity.PetItemCommentEntity;
 import com.ureca.sole_paradise.petItem.db.entity.PetItemEntity;
 import com.ureca.sole_paradise.petItem.db.repository.PetItemCommentRepository;
 import com.ureca.sole_paradise.petItem.db.repository.PetItemRepository;
+import com.ureca.sole_paradise.s3.dto.FileInfoDto;
+import com.ureca.sole_paradise.s3.dto.S3Option;
+import com.ureca.sole_paradise.s3.service.S3Service;
 import com.ureca.sole_paradise.user.db.entity.UserEntity;
 import com.ureca.sole_paradise.user.db.repository.UserRepository;
 import com.ureca.sole_paradise.util.NotFoundException;
@@ -28,13 +31,15 @@ import java.util.List;
 @Service
 public class PetItemService {
 
+    private final S3Service s3service;
     private final PetItemRepository petItemRepository;
     private final UserRepository userRepository;
     private final PetItemCommentRepository petItemCommentRepository;
 
-    public PetItemService(final PetItemRepository petItemRepository,
+    public PetItemService(S3Service s3service, final PetItemRepository petItemRepository,
                           final UserRepository userRepository,
                           final PetItemCommentRepository petItemCommentRepository) {
+        this.s3service = s3service;
         this.petItemRepository = petItemRepository;
         this.userRepository = userRepository;
         this.petItemCommentRepository = petItemCommentRepository;
@@ -112,6 +117,16 @@ public class PetItemService {
             return referencedWarning;
         }
         return null;
+    }
+
+    public String petItemImgUpload(MultipartFile multipartFile, int id) {
+        FileInfoDto fileInfoDto = FileInfoDto.builder()
+                .file(multipartFile)
+                .allowedMimeTypes(List.of("image/jpg", "image/jpeg", "image/png"))
+                .id(id)
+                .s3Option(S3Option.petItemImgUpload).build();
+        String uploadURL = s3service.fileUpload(fileInfoDto);
+        return uploadURL;
     }
 
 }

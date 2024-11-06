@@ -84,7 +84,7 @@ public class CommunityController {
                                        @RequestParam("user") Integer user,
 //                                       @RequestParam("createdAt") OffsetDateTime createdAt,
                                        @RequestParam(value = "imageUrl", required = false) MultipartFile file){
-        try {
+
             CommunityDTO communityDTO = new CommunityDTO();
             communityDTO.setTitle(title);
             communityDTO.setContents(contents);
@@ -92,27 +92,26 @@ public class CommunityController {
             communityDTO.setUser(user);  // user ID 설정
             communityDTO.setCreatedAt(LocalDateTime.now());  // 현재 시간으로 생성일 설정
 
-            if (file != null && !file.isEmpty()) {
-                String fileName = System.currentTimeMillis()+"";// + "_" + file.getOriginalFilename();
-                String[] exts = file.getOriginalFilename().split("\\.");
-                String ext = exts[exts.length-1];//확장자
-                Path filePath = Paths.get(UPLOAD_DIR + fileName+"."+ext);
-                Files.createDirectories(filePath.getParent());
-                Files.copy(file.getInputStream(), filePath);
-                String fp = filePath.toString();
-                System.out.println("fp="+fp);
-                int staticIndex = fp.lastIndexOf("uploads");
-                String ss = fp.substring(staticIndex+8);
-                communityDTO.setImageUrl(ss); // 파일 이름만 저장
-                System.out.println("ss="+ss);
-            }
+//            if (file != null && !file.isEmpty()) {
+//                String fileName = System.currentTimeMillis()+"";// + "_" + file.getOriginalFilename();
+//                String[] exts = file.getOriginalFilename().split("\\.");
+//                String ext = exts[exts.length-1];//확장자
+//                Path filePath = Paths.get(UPLOAD_DIR + fileName+"."+ext);
+//                Files.createDirectories(filePath.getParent());
+//                Files.copy(file.getInputStream(), filePath);
+//                String fp = filePath.toString();
+//                System.out.println("fp="+fp);
+//                int staticIndex = fp.lastIndexOf("uploads");
+//                String ss = fp.substring(staticIndex+8);
+//                communityDTO.setImageUrl(ss); // 파일 이름만 저장
+//                System.out.println("ss="+ss);
+//            }
 
-            final Integer createdpostId = communityService.create(communityDTO);
-            return new ResponseEntity<>(createdpostId, HttpStatus.CREATED);
+            final Integer createdcommunityId = communityService.create(communityDTO);
+        communityDTO.setImageUrl(communityService.cpmmunityUoload(file, createdcommunityId));
+            communityService.update(createdcommunityId,communityDTO);
+            return new ResponseEntity<>(createdcommunityId, HttpStatus.CREATED);
 
-        } catch (IOException e) {
-            return ResponseEntity.internalServerError().body("Could not upload the petItem: " + e.getMessage());
-        }
     }
 
 
