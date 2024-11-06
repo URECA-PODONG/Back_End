@@ -50,6 +50,11 @@ public class PetController {
         return ResponseEntity.ok(petService.get(petId));
     }
 
+	@GetMapping("/pet/{userId}")
+	public ResponseEntity<List<PetDTO>> getMyPet(@PathVariable(name = "userId") final Integer userId) {
+		return ResponseEntity.ok(petService.getMyPet(userId));
+	}
+
 	/*@PostMapping
 	@ApiResponse(responseCode = "201")
 	public ResponseEntity<Integer> createPet(@RequestBody @Valid final PetDTO petDTO) {

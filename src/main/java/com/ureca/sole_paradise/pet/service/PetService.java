@@ -1,5 +1,6 @@
 package com.ureca.sole_paradise.pet.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.domain.Sort;
@@ -28,6 +29,15 @@ public class PetService {
         this.petRepository = petRepository;
         this.userRepository = userRepository;
         this.healthRepository = healthRepository;
+    }
+
+    public List<PetDTO> getMyPet(final Integer userId) {
+        List<PetEntity> petEntityList = petRepository.findByUser_UserId(userId);
+        List<PetDTO> petDTOList = new ArrayList<>();
+        for (PetEntity petEntity : petEntityList) {
+            petDTOList.add(mapToDTO(petEntity, new PetDTO()));
+        }
+        return petDTOList;
     }
 
     public List<PetDTO> findAll() {
