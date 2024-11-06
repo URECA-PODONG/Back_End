@@ -1,6 +1,8 @@
 package com.ureca.sole_paradise.health.service;
 
+import java.util.ArrayList;
 import java.util.List;
+
 import com.ureca.sole_paradise.util.NotFoundException;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -12,7 +14,7 @@ import com.ureca.sole_paradise.pet.db.repository.PetRepository;
 
 @Service
 public class HealthService {
-	
+
 	  private final HealthRepository healthRepository;
 	    private final PetRepository petRepository;
 

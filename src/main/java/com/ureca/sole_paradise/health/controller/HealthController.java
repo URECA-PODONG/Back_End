@@ -2,6 +2,7 @@ package com.ureca.sole_paradise.health.controller;
 
 import java.util.List;
 
+import com.ureca.sole_paradise.pet.db.dto.PetDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

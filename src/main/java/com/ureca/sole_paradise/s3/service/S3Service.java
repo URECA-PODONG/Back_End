@@ -75,6 +75,24 @@ public class S3Service {
                 String splitStr = ".com/";
                 return originName.substring(originName.lastIndexOf(splitStr) + splitStr.length());
             }
+            case petItemImgUpload -> {     //프로필 사진 업로드 경로
+                return "petItem/" + fileInfoDto.getId() + "/" + UUID.randomUUID().toString()
+                        + ext;    //프로필 이미지 저장경로 생성
+            }
+            case  petItemImgDelete -> {     //프로필 사진 삭제 경로
+                String splitStr = ".com/";
+                return originName.substring(originName.lastIndexOf(splitStr) + splitStr.length());    //프로필 이미지 삭제경로 생성
+            }
+            case CommunityImgUpload -> {     //프로필 사진 업로드 경로
+                return "community/" + fileInfoDto.getId() + "/" + UUID.randomUUID().toString()
+                        + ext;    //프로필 이미지 저장경로 생성
+            }
+            case CommunityImgDelete -> {     //프로필 사진 삭제 경로
+                String splitStr = ".com/";
+                return originName.substring(originName.lastIndexOf(splitStr) + splitStr.length());    //프로필 이미지 삭제경로 생성
+            }
+
+
             default -> {
                 return null;
             }

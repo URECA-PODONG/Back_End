@@ -1,5 +1,6 @@
 package com.ureca.sole_paradise.pet.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.ureca.sole_paradise.s3.dto.FileInfoDto;
@@ -34,6 +35,15 @@ public class PetService {
         this.userRepository = userRepository;
         this.healthRepository = healthRepository;
         this.s3service = s3service;
+    }
+
+    public List<PetDTO> getMyPet(final Integer userId) {
+        List<PetEntity> petEntityList = petRepository.findByUser_UserId(userId);
+        List<PetDTO> petDTOList = new ArrayList<>();
+        for (PetEntity petEntity : petEntityList) {
+            petDTOList.add(mapToDTO(petEntity, new PetDTO()));
+        }
+        return petDTOList;
     }
 
     public List<PetDTO> findAll() {
