@@ -23,7 +23,6 @@ public class WalkRouteService {
     public WalkRouteDTO registerWalkRoute(WalkRouteDTO walkRouteDTO) {
         UserEntity userEntity = userRepository.findById(walkRouteDTO.getUserId())
                 .orElseThrow(() -> new IllegalArgumentException("Invalid user ID"));
-
         WalkRouteEntity walkRouteEntity = WalkRouteEntity.builder()
                 .Latitude(walkRouteDTO.getLatitude())
                 .longitude(walkRouteDTO.getLongitude())
