@@ -6,6 +6,7 @@ import com.ureca.sole_paradise.util.ReferencedException;
 import com.ureca.sole_paradise.util.ReferencedWarning;
 
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
@@ -69,16 +70,18 @@ public class PetItemController {
     }
 
     // 사진 업로드 등록
-
-    private static final String UPLOAD_DIR = "src/main/resources/static/uploads/";
+//    private static final String UPLOAD_DIR = "src/main/resources/static/uploads/";
     @PostMapping
-    public ResponseEntity<?> uploadPet(@RequestParam("name") String name,
+    public ResponseEntity<?> uploadPet(HttpServletRequest request,
+                                       @RequestParam("name") String name,
                                        @RequestParam("description") String description,
                                        @RequestParam("user") Integer user,
                                        @RequestParam("price") Integer price,
                                        @RequestParam("sharing") Integer sharing,
                                        @RequestParam(value = "imageUrl", required = false) MultipartFile file){
-        try {
+
+        String UPLOAD_DIR = request.getSession().getServletContext().getRealPath("/");
+
             PetItemDTO petItemDTO = new PetItemDTO();
             petItemDTO.setName(name);
             petItemDTO.setDescription(description);
@@ -87,28 +90,29 @@ public class PetItemController {
             petItemDTO.setUser(user);  // user ID 설정
             petItemDTO.setCreatedAt(LocalDateTime.now());  // 현재 시간으로 생성일 설정
 
-            if (file != null && !file.isEmpty()) {
-                String fileName = System.currentTimeMillis()+"";// + "_" + file.getOriginalFilename();
-                String[] exts = file.getOriginalFilename().split("\\.");
-                String ext = exts[exts.length-1];//확장자
-                Path filePath = Paths.get(UPLOAD_DIR + fileName+"."+ext);
-                Files.createDirectories(filePath.getParent());
-                Files.copy(file.getInputStream(), filePath);
-                String fp = filePath.toString();
-                System.out.println("fp="+fp);
-                int staticIndex = fp.lastIndexOf("uploads");
-                String ss = fp.substring(staticIndex+8);
-                petItemDTO.setImageUrl(ss); // 파일 이름만 저장
-                System.out.println("ss="+ss);
-            }
+//            if (file != null && !file.isEmpty()) {
+//                String fileName = System.currentTimeMillis()+"";
+//                String[] exts = file.getOriginalFilename().split("\\.");
+//                String ext = exts[exts.length-1];//확장자
+//                Path filePath = Paths.get(UPLOAD_DIR + fileName+"."+ext);
+//                System.out.println("UPLOAD PATH="+filePath);
+//                Files.createDirectories(filePath.getParent());
+//                Files.copy(file.getInputStream(), filePath);
+//                String fp = filePath.toString();
+//                System.out.println("fp="+fp);
+//                int staticIndex = fp.lastIndexOf("uploads");
+//                String ss = fp.substring(staticIndex+8);
+//                petItemDTO.setImageUrl(ss); // 파일 이름만 저장
+//                System.out.println("ss="+ss);
+//            }
 
             final Integer createdPetItemId = petItemService.create(petItemDTO);
+
+            petItemDTO.setImageUrl(petItemService.petItemImgUpload(file, createdPetItemId));
+            petItemService.update(createdPetItemId, petItemDTO);
             return new ResponseEntity<>(createdPetItemId, HttpStatus.CREATED);
 
-        } catch (IOException e) {
-            return ResponseEntity.internalServerError().body("Could not upload the petItem: " + e.getMessage());
         }
-    }
 
 
 }

@@ -5,10 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ureca.sole_paradise.health.db.entity.HealthEntity;
 import com.ureca.sole_paradise.pet.db.entity.PetEntity;
-
+import java.util.List;
 
 public interface HealthRepository extends JpaRepository<HealthEntity, Integer> {
 
     HealthEntity findFirstByPet(PetEntity pet);
+
 
 }

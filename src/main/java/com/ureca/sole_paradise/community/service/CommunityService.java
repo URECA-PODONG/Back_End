@@ -2,6 +2,9 @@ package com.ureca.sole_paradise.community.service;
 
 import java.util.List;
 
+import com.ureca.sole_paradise.s3.dto.FileInfoDto;
+import com.ureca.sole_paradise.s3.dto.S3Option;
+import com.ureca.sole_paradise.s3.service.S3Service;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -14,20 +17,21 @@ import com.ureca.sole_paradise.user.db.entity.UserEntity;
 import com.ureca.sole_paradise.user.db.repository.UserRepository;
 import com.ureca.sole_paradise.util.NotFoundException;
 import com.ureca.sole_paradise.util.ReferencedWarning;
-
+import org.springframework.web.multipart.MultipartFile;
 
 
 @Service
 public class CommunityService {
 
-
+    private final S3Service s3Service;
     private final CommunityRepository communityRepository;
     private final UserRepository userRepository;
     private final CommunityCommentRepository communityCommentRepository;
 
-    public CommunityService(final CommunityRepository communityRepository,
+    public CommunityService(S3Service s3Service, final CommunityRepository communityRepository,
                             final UserRepository userRepository,
                             final CommunityCommentRepository communityCommentRepository) {
+        this.s3Service = s3Service;
         this.communityRepository = communityRepository;
         this.userRepository = userRepository;
         this.communityCommentRepository = communityCommentRepository;
@@ -99,6 +103,17 @@ public class CommunityService {
             return referencedWarning;
         }
         return null;
+    }
+
+
+    public String cpmmunityUoload(MultipartFile multipartFile, int id) {
+        FileInfoDto fileInfoDto = FileInfoDto.builder()
+                .file(multipartFile)
+                .allowedMimeTypes(List.of("image/jpg", "image/jpeg", "image/png"))
+                .id(id)
+                .s3Option(S3Option.CommunityImgUpload).build();
+        String uploadURL = s3Service.fileUpload(fileInfoDto);
+        return uploadURL;
     }
 
 
