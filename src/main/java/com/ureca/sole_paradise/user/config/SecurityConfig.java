@@ -50,7 +50,7 @@ public class SecurityConfig {
 
                         CorsConfiguration config = new CorsConfiguration();
 
-                        config.setAllowedOrigins(List.of("*"));
+                        config.setAllowedOrigins(List.of("http://localhost:5173", "https://sole-paradise.vercel.app"));
                         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
                         config.setAllowCredentials(true);
                         config.setAllowedHeaders(List.of("*"));
