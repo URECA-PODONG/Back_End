@@ -16,25 +16,22 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Setter
 @EntityListeners(AuditingEntityListener.class)
 public class HealthEntity {
-	
-	@Id
+
+    @Id
     @Column(nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer healthId;
 
     @Column
-    @LastModifiedDate
     private LocalDate visitedDate;
 
     @Column(columnDefinition = "longtext")
     private String notes;
 
     @Column
-    @LastModifiedDate
     private LocalDate healthDate;
 
     @Column
-    @LastModifiedDate
     private LocalDate nextCheckupDate;
 
     @Column(columnDefinition = "tinyint", length = 1)
