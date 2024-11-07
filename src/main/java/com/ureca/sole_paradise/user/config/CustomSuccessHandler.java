@@ -42,13 +42,13 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
             //회원가입 페이지
             response.addCookie(createCookie("profile_nickname",customUserDetails.getNickname()));
             response.addCookie(createCookie("email",customUserDetails.getEmail()));
-            response.sendRedirect("http://localhost:5173/userRegister/" + URLEncoder.encode(customUserDetails.getEmail(), "UTF-8"));
+            response.sendRedirect("https://sole-paradise.vercel.app/userRegister/" + URLEncoder.encode(customUserDetails.getEmail(), "UTF-8"));
 
             //    response.sendRedirect("http://localhost:5173/userRegister/:userId");
             return;
         }
 
-        response.sendRedirect("http://localhost:5173/MainPage/" + customUserDetails.getUserId());
+        response.sendRedirect("https://sole-paradise.vercel.app/MainPage/" + customUserDetails.getUserId());
     }
 
     private Cookie createCookie(String key, String value) {
